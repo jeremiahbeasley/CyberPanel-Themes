@@ -11,85 +11,68 @@
     sidebar tint), since the token system styles solid surfaces.
 */
 
-:root {
-    /* Original palette: white text over black-glass panels
-       (rgb(0 0 0 / .24)) and white-glass hovers (rgb(255 255 255 /
-       14%)) on a photo backdrop; opaque menu base rgb(18 14 40 /
-       87%); golden label accent #e0ca2d; link hover #dee4e7. */
-    --bg-primary: #1a1533;
-    --bg-secondary: #231d41;
-    --bg-hover: #363053;
-
-    --text-primary: #ffffff;
-    --text-secondary: #c9cfdd;
-    --text-heading: #ffffff;
-
-    --bg-sidebar: #120e28;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #b9bdd1;
-    --sidebar-section-bg: #2e2752;
-    --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #363053;
-    --sidebar-item-hover-text: #ffffff;
-
-    /* golden accent from the form labels (#e0ca2d); dark label on
-       it, since white on yellow has almost no contrast */
-    --accent-color: #e0ca2d;
-    --accent-hover: #ecd83f;
-    --text-on-accent: #120e28;
-
-    --border-color: #423c5e;
-    --border-soft: #2e2752;
-    --shadow-color: rgba(0, 0, 0, 0.45);
-
-    --bg-muted: #2e2752;
-    --bg-code: #120e28;
-    --table-head-bg: #120e28;
-    --table-head-text: #ffffff;
-
-    --focus-ring: #e0ca2d;
-}
-
 textarea {
     font-family: monospace;
 }
 
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.45);
+}
 
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #e0ca2d;
-    --accent-hover: #ecd83f;
-    --bg-code: #120e28;
-    --bg-hover: #363053;
-    --bg-muted: #2e2752;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #1a1533;
     --bg-secondary: #231d41;
     --bg-sidebar: #120e28;
-    --border-color: #423c5e;
-    --focus-ring: #e0ca2d;
-    --sidebar-item-hover-bg: #363053;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-section-bg: #2e2752;
-    --sidebar-section-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #b9bdd1;
-    --table-head-bg: #120e28;
-    --table-head-text: #ffffff;
-    --text-heading: #ffffff;
-    --text-on-accent: #120e28;
+    --bg-hover: #363053;
+    --bg-muted: #2e2752;
+    --bg-code: #120e28;
     --text-primary: #ffffff;
     --text-secondary: #c9cfdd;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #ffffff;
+    --accent-color: #e0ca2d;
+    --accent-hover: #ecd83f;
+    --text-on-accent: #120e28;
+    --focus-ring: #e0ca2d;
+    --border-color: #423c5e;
+    --table-head-bg: #120e28;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #b9bdd1;
+    --sidebar-section-bg: #2e2752;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #363053;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #525252;
+    --sidebar-item-active-text: #525252;
+    --border-soft: #2e2752;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
+    --bg-primary: #1a1533;
+    --bg-secondary: #231d41;
+    --bg-sidebar: #120e28;
+    --bg-hover: #363053;
+    --bg-muted: #2e2752;
+    --bg-code: #120e28;
+    --text-primary: #ffffff;
+    --text-secondary: #c9cfdd;
+    --text-heading: #ffffff;
+    --accent-color: #e0ca2d;
+    --accent-hover: #ecd83f;
+    --text-on-accent: #120e28;
+    --focus-ring: #e0ca2d;
+    --border-color: #423c5e;
+    --table-head-bg: #120e28;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #b9bdd1;
+    --sidebar-section-bg: #2e2752;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #363053;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #525252;
+    --sidebar-item-active-text: #525252;
+    --border-soft: #2e2752;
 }

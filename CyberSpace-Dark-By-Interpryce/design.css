@@ -14,6 +14,14 @@
 ***********************************************************/
 
 /* Original theme palette, kept for provenance */
+
+
+
+
+textarea {
+    font-family: monospace;
+}
+
 :root {
     --color-primary: #00a1a9;
     --color-secondary: #059b82;
@@ -24,86 +32,63 @@
     --color-bg-blue: #002a43;
     --color-red: #f02769;
     --color-red-2: #910000;
-}
-
-:root {
-    /* Deep blue-dark #031521 base; panels/sidebar were translucent
-       black over it (composited here to solid values); teal accent
-       #00a1a9 with #059b82 hover, sky-blue #1aabe1 highlights,
-       translucent steel-blue borders #89baed36 -> #1f384c. */
-    --bg-primary: #031521;
-    --bg-secondary: #041d2d;
-    --bg-hover: #002a43;
-
-    --text-primary: #ffffff;
-    --text-secondary: #c3d3dc;
-    --text-heading: #ffffff;
-
-    --bg-sidebar: #01090f;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #9fb3bf;
-    --sidebar-section-bg: #002a43;
-    --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #002a43;
-    --sidebar-item-hover-text: #ffffff;
-
-    /* dark label on teal: white on #00a1a9 is only ~3.2:1 */
-    --accent-color: #00a1a9;
-    --accent-hover: #059b82;
-    --text-on-accent: #031521;
-
-    --border-color: #1f384c;
-    --border-soft: #142a3b;
     --shadow-color: rgba(0, 0, 0, 0.5);
-
-    --bg-muted: #002a43;
-    --bg-code: #01090f;
-    --table-head-bg: #01121c;
-    --table-head-text: #ffffff;
-
-    --focus-ring: #1aabe1;
 }
 
-textarea {
-    font-family: monospace;
-}
-
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #00a1a9;
-    --accent-hover: #059b82;
-    --bg-code: #01090f;
-    --bg-hover: #002a43;
-    --bg-muted: #002a43;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #031521;
     --bg-secondary: #041d2d;
     --bg-sidebar: #01090f;
-    --border-color: #1f384c;
-    --focus-ring: #1aabe1;
-    --sidebar-item-hover-bg: #002a43;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-section-bg: #002a43;
-    --sidebar-section-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #9fb3bf;
-    --table-head-bg: #01121c;
-    --table-head-text: #ffffff;
-    --text-heading: #ffffff;
-    --text-on-accent: #031521;
+    --bg-hover: #002a43;
+    --bg-muted: #002a43;
+    --bg-code: #01090f;
     --text-primary: #ffffff;
     --text-secondary: #c3d3dc;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #ffffff;
+    --accent-color: #00a1a9;
+    --accent-hover: #059b82;
+    --text-on-accent: #031521;
+    --focus-ring: #1aabe1;
+    --border-color: #1f384c;
+    --table-head-bg: #01121c;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #9fb3bf;
+    --sidebar-section-bg: #002a43;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #002a43;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #292929;
+    --sidebar-item-active-text: #292929;
+    --border-soft: #142a3b;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
+    --bg-primary: #031521;
+    --bg-secondary: #041d2d;
+    --bg-sidebar: #01090f;
+    --bg-hover: #002a43;
+    --bg-muted: #002a43;
+    --bg-code: #01090f;
+    --text-primary: #ffffff;
+    --text-secondary: #c3d3dc;
+    --text-heading: #ffffff;
+    --accent-color: #00a1a9;
+    --accent-hover: #059b82;
+    --text-on-accent: #031521;
+    --focus-ring: #1aabe1;
+    --border-color: #1f384c;
+    --table-head-bg: #01121c;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #9fb3bf;
+    --sidebar-section-bg: #002a43;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #002a43;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #292929;
+    --sidebar-item-active-text: #292929;
+    --border-soft: #142a3b;
 }

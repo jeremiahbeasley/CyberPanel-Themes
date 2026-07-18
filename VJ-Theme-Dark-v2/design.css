@@ -6,34 +6,6 @@
    Tested on: CyberPanel 2.4 build 4
    ========================================================================== */
 
-:root {
-    /* 1. BRAND COLORS */
-    --vj-main: #323232;
-    --vj-light: #5a5a5a;
-    --vj-grad: linear-gradient(135deg, #5a5a5a 0%, #525252 100%);
-
-    /* 2. NORMAL MODE (STANDARD DARK THEME) */
-    /* We override "Light Mode" variables to be Dark to ensure always-dark look */
-    --bg-primary: #1c1c1c !important;
-    --bg-secondary: #2c2c2c !important;
-    --bg-sidebar: #222222 !important;
-    --bg-sidebar-item: #2c2c2c !important;
-    --bg-hover: rgba(255, 255, 255, 0.12) !important;
-
-    /* Force Light Text for Visibility */
-    --text-primary: #e2e2e2 !important;
-    --text-secondary: #aaaaaa !important;
-    --text-heading: #ffffff !important;
-
-    --accent-color: #a0a0a0 !important;
-    --accent-hover: #ffffff !important;
-    --border-color: rgba(255, 255, 255, 0.1) !important;
-    --shadow-color: rgba(0, 0, 0, 0.4) !important;
-    --ai-banner-bg: var(--vj-grad) !important;
-    --active-shadow: rgba(0, 0, 0, 0.5) !important;
-    --text-inverse: #ffffff !important;
-}
-
 #sidebar .menu-item.active {
     box-shadow: 0 3px 10px var(--active-shadow) !important;
 }
@@ -41,25 +13,6 @@
 /* ==========================================================================
    3. DARK MODE OVERRIDES (DEEP DARK / AMOLED STYLE)
    ========================================================================== */
-[data-theme="dark"] {
-    --vj-dark-bg: #000000;
-    --vj-card-bg: #0f0f0f;
-    --vj-accent: #d4d4d4;
-    --vj-text: #ffffff;
-    --vj-border: #333333;
-
-    --bg-primary: var(--vj-dark-bg) !important;
-    --bg-secondary: var(--vj-card-bg) !important;
-    --bg-sidebar: #050505 !important;
-    --bg-sidebar-item: #141414 !important;
-    --text-primary: var(--vj-text) !important;
-    --text-secondary: #888888 !important;
-    --accent-color: #cccccc !important;
-    --border-color: rgba(255, 255, 255, 0.08) !important;
-    --shadow-color: rgba(0, 0, 0, 0.8) !important;
-    --ai-banner-bg: linear-gradient(135deg, #222222 0%, #000000 100%) !important;
-    --bg-hover: rgba(255, 255, 255, 0.08) !important;
-}
 
 /* ==========================================================================
    4. FORCE DARK TEXT OVERRIDES (FOR NORMAL MODE VISIBILITY)
@@ -318,110 +271,61 @@ h1#loginFormTitle,
     transform: translateY(-1px) !important;
 }
 
-/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
-   with insufficient contrast, plus a focus ring visible on its own
-   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
 :root {
-    --focus-ring: #cccccc;
-    --text-on-accent: #525252;
+    --vj-main: #323232;
+    --vj-light: #5a5a5a;
+    --vj-grad: linear-gradient(135deg, #5a5a5a 0%, #525252 100%);
+    --bg-sidebar-item: #2c2c2c;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --ai-banner-bg: var(--vj-grad);
+    --active-shadow: rgba(0, 0, 0, 0.5);
+    --text-inverse: #ffffff;
 }
 
-
-/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
-   with insufficient contrast, plus a focus ring visible on its own
-   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --sidebar-item-hover-text: #5856d6;
-    --sidebar-section-text: #525252;
-}
-
-
-/* Mode-invariance: pin tokens the dark/light toggle would flip. */
-:root {
-    --bg-code: #313131;
+    --bg-primary: #1c1c1c;
+    --bg-secondary: #2c2c2c;
+    --bg-sidebar: #222222;
+    --bg-hover: #262626;
     --bg-muted: #1c1c1c;
-    --table-head-bg: #a0a0a0;
-    --table-head-text: #525252;
-}
-
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-hover: #ffffff;
     --bg-code: #313131;
-    --bg-muted: #1c1c1c;
-    --focus-ring: #cccccc;
-    --sidebar-item-hover-text: #5856d6;
-    --sidebar-section-text: #525252;
-    --table-head-bg: #a0a0a0;
-    --table-head-text: #525252;
+    --text-primary: #999999;
+    --text-secondary: #aaaaaa;
     --text-heading: #ffffff;
-    --text-on-accent: #525252;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --sidebar-item-active-text: #333333;
-    --sidebar-section-text: #333333;
-    --table-head-text: #333333;
+    --accent-color: #a0a0a0;
+    --accent-hover: #ffffff;
     --text-on-accent: #333333;
-    --text-primary: #727272;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --sidebar-item-active-text: #525252;
+    --focus-ring: #cccccc;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --table-head-bg: #a0a0a0;
     --table-head-text: #333333;
-    --text-primary: #757575;
+    --sidebar-section-text: #333333;
+    --sidebar-item-hover-text: #c9c9c9;
+    --sidebar-item-active-text: #333333;
+    --sidebar-item-active-text: #333333;
 }
 
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --text-primary: #9b9b9b;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
-    --text-primary: #999999;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --text-primary: #727272;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --text-primary: #757575;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --text-primary: #9b9b9b;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --text-primary: #999999;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --text-primary: #727272;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --text-primary: #757575;
+    --bg-primary: #000000;
+    --bg-secondary: #0f0f0f;
+    --bg-sidebar: #050505;
+    --bg-hover: #242424;
+    --bg-muted: #1c1c1c;
+    --bg-code: #313131;
+    --text-primary: #989898;
+    --text-secondary: #888888;
+    --text-heading: #ffffff;
+    --accent-color: #cccccc;
+    --accent-hover: #ffffff;
+    --text-on-accent: #525252;
+    --focus-ring: #cccccc;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --table-head-bg: #a0a0a0;
+    --table-head-text: #333333;
+    --sidebar-section-text: #525252;
+    --sidebar-item-hover-text: #c9c9c9;
+    --sidebar-item-active-text: #525252;
+    --sidebar-item-active-text: #525252;
 }

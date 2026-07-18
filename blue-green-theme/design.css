@@ -7,73 +7,62 @@
 */
 
 :root {
-    /* original gradient / button colors, kept for provenance */
     --theme-teal: #11998e;
     --theme-green: #38ef7d;
-
-    /* light mint-tinted surfaces */
-    --bg-primary: #f4f8f7;
-    --bg-secondary: #ffffff;
-    --bg-hover: #e4efec;
-    --text-primary: #1e2b29;
-    --text-secondary: #43554f;
-    --text-heading: #123f3a;
-
-    --bg-sidebar: #eef7f5;
-    --sidebar-text: #33403e;
-    --sidebar-text-muted: #4d605c;
-    --sidebar-section-bg: #0e7d74;
-    --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #d8f0e7;
-    --sidebar-item-hover-text: #085f50;
-
-    /* teal action color, green hover — both darkened from the
-       originals (#11998e, #38ef7d) to keep 4.5:1 with white labels */
-    --accent-color: #0e7d74;
-    --accent-hover: #0b883a;
-    --text-on-accent: #ffffff;
-
-    --border-color: #d3e5e0;
-    --border-soft: #e2efeb;
     --shadow-color: rgba(17, 60, 55, 0.08);
-    --table-head-bg: #0e7d74;
-    --table-head-text: #ffffff;
-
-    --focus-ring: #11998e;
 }
 
-
-/* Mode-invariance: pin every token the dark/light toggle would
-   otherwise flip, so the theme renders identically in both modes. */
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --bg-code: #dae7e4;
-    --bg-muted: #f4f8f7;
-}
-
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #0e7d74;
-    --accent-hover: #0b883a;
-    --bg-code: #dae7e4;
-    --bg-hover: #e4efec;
-    --bg-muted: #f4f8f7;
     --bg-primary: #f4f8f7;
     --bg-secondary: #ffffff;
     --bg-sidebar: #eef7f5;
-    --border-color: #d3e5e0;
-    --focus-ring: #11998e;
-    --sidebar-item-hover-bg: #d8f0e7;
-    --sidebar-item-hover-text: #085f50;
-    --sidebar-section-bg: #0e7d74;
-    --sidebar-section-text: #ffffff;
-    --sidebar-text: #33403e;
-    --sidebar-text-muted: #4d605c;
-    --table-head-bg: #0e7d74;
-    --table-head-text: #ffffff;
-    --text-heading: #123f3a;
-    --text-on-accent: #ffffff;
+    --bg-hover: #e4efec;
+    --bg-muted: #f4f8f7;
+    --bg-code: #dae7e4;
     --text-primary: #1e2b29;
     --text-secondary: #43554f;
+    --text-heading: #123f3a;
+    --accent-color: #0e7d74;
+    --accent-hover: #0b883a;
+    --text-on-accent: #ffffff;
+    --focus-ring: #11998e;
+    --border-color: #d3e5e0;
+    --table-head-bg: #0e7d74;
+    --table-head-text: #ffffff;
+    --sidebar-text: #33403e;
+    --sidebar-text-muted: #4d605c;
+    --sidebar-section-bg: #0e7d74;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d8f0e7;
+    --sidebar-item-hover-text: #085f50;
+    --border-soft: #e2efeb;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #131b1a;
+    --bg-secondary: #192423;
+    --bg-sidebar: #101716;
+    --bg-hover: #243332;
+    --bg-muted: #192423;
+    --bg-code: #1f2d2c;
+    --text-primary: #e3e8e7;
+    --text-secondary: #acb9b8;
+    --text-heading: #f1f3f3;
+    --accent-color: #11998e;
+    --accent-hover: #15beb0;
+    --text-on-accent: #101010;
+    --focus-ring: #11998e;
+    --border-color: #324846;
+    --table-head-bg: #11998e;
+    --table-head-text: #101010;
+    --sidebar-text: #acb9b8;
+    --sidebar-text-muted: #acb9b8;
+    --sidebar-section-bg: #11998e;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #243332;
+    --sidebar-item-hover-text: #e3e8e7;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

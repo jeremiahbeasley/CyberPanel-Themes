@@ -7,100 +7,70 @@
 */
 
 :root {
-    /* original Ragnarock palette */
     --primary: #003049;
     --secondary: #f77f00;
     --accent: #d62828;
     --background: #eae2b7;
     --background-light: #f6efca;
     --highlight: #fdc85e;
-
-    /* cream content on parchment, deep navy sidebar */
-    --bg-primary: #eae2b7;
-    --bg-secondary: #f6efca;
-    --bg-hover: #ddd39e;
-    --text-primary: #003049;
-    --text-secondary: #546770;
-    --text-heading: #003049;
-
-    --bg-sidebar: var(--primary);
-    --sidebar-text: #eae2b7;
-    --sidebar-text-muted: #fdc85e;
-    --sidebar-section-bg: #003049;
-    --sidebar-section-text: #f77f00;
-    --sidebar-item-hover-bg: #00415f;
-    --sidebar-item-hover-text: #fdc85e;
-
-    /* navy buttons, orange hover (darkened for white label contrast) */
-    --accent-color: #003049;
-    --accent-hover: #b75e00;
-    --text-on-accent: #ffffff;
-
-    --border-color: #d3cb87;
-    --border-soft: #e0d9a4;
     --shadow-color: rgba(17, 17, 26, 0.1);
-    --bg-muted: #f0eddb;
-    --table-head-bg: #f6efca;
-    --table-head-text: #003049;
-
-    --focus-ring: #c76600;
 }
 
-
-/* Mode-invariance: pin every token the dark/light toggle would
-   otherwise flip, so the theme renders identically in both modes. */
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --bg-code: #e0d596;
-}
-
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #003049;
-    --accent-hover: #b75e00;
-    --bg-code: #e0d596;
-    --bg-hover: #ddd39e;
-    --bg-muted: #f0eddb;
     --bg-primary: #eae2b7;
     --bg-secondary: #f6efca;
     --bg-sidebar: #003049;
-    --border-color: #d3cb87;
-    --focus-ring: #c76600;
-    --sidebar-item-hover-bg: #00415f;
-    --sidebar-item-hover-text: #fdc85e;
-    --sidebar-section-bg: #003049;
-    --sidebar-section-text: #f77f00;
-    --sidebar-text: #eae2b7;
-    --sidebar-text-muted: #fdc85e;
-    --table-head-bg: #f6efca;
-    --table-head-text: #003049;
-    --text-heading: #003049;
-    --text-on-accent: #ffffff;
+    --bg-hover: #ddd39e;
+    --bg-muted: #f0eddb;
+    --bg-code: #e0d596;
     --text-primary: #003049;
     --text-secondary: #546770;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
-    --sidebar-item-active-bg: #0080c3;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --sidebar-item-active-bg: #0080c3;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #003049;
+    --accent-color: #003049;
+    --accent-hover: #b75e00;
+    --text-on-accent: #ffffff;
+    --focus-ring: #c76600;
+    --border-color: #d3cb87;
+    --table-head-bg: #f6efca;
+    --table-head-text: #003049;
+    --sidebar-text: #eae2b7;
+    --sidebar-text-muted: #fdc85e;
+    --sidebar-section-bg: #003049;
+    --sidebar-section-text: #f77f00;
+    --sidebar-item-hover-bg: #00415f;
+    --sidebar-item-hover-text: #fdc85e;
     --sidebar-item-active-text: #0a0a0a;
+    --sidebar-item-active-bg: #0080c3;
+    --sidebar-item-active-text: #0a0a0a;
+    --border-soft: #e0d9a4;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
-    --sidebar-item-active-text: #0a0a0a;
+    --bg-primary: #13181b;
+    --bg-secondary: #192024;
+    --bg-sidebar: #101417;
+    --bg-hover: #242e33;
+    --bg-muted: #192024;
+    --bg-code: #1f282d;
+    --text-primary: #e3e6e8;
+    --text-secondary: #acb4b9;
+    --text-heading: #f1f2f3;
+    --accent-color: #008ed8;
+    --accent-hover: #02a8ff;
+    --text-on-accent: #101010;
+    --focus-ring: #008ed8;
+    --border-color: #324148;
+    --table-head-bg: #008ed8;
+    --table-head-text: #101010;
+    --sidebar-text: #acb4b9;
+    --sidebar-text-muted: #acb4b9;
+    --sidebar-section-bg: #008ed8;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242e33;
+    --sidebar-item-hover-text: #e3e6e8;
+    --sidebar-item-active-text: #101010;
+    --sidebar-item-active-bg: #008ed8;
+    --sidebar-item-active-text: #101010;
 }

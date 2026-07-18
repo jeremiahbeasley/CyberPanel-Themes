@@ -14,43 +14,6 @@
     no longer exist in the panel.
 */
 
-:root {
-    /* Original palette: all-white surfaces separated by #dfe8f1
-       hairlines, pale-blue pill hover/active #ecf4ff (border
-       #b9d6ff), near-black text rgb(18,18,18), navy icon/IP ink
-       #022352 / rgb(0,43,103), cornflower #6495ed tile accent. */
-    --bg-primary: #ffffff;
-    --bg-secondary: #ffffff;
-    --bg-hover: #ecf4ff;
-
-    --text-primary: #121212;
-    --text-secondary: #6e6e6e;
-    --text-heading: #022352;
-
-    --bg-sidebar: #ffffff;
-    --sidebar-text: #121212;
-    --sidebar-text-muted: #6e6e6e;
-    --sidebar-section-bg: #ecf4ff;
-    --sidebar-section-text: #022352;
-    --sidebar-item-hover-bg: #ecf4ff;
-    --sidebar-item-hover-text: #022352;
-
-    /* cornflower #6495ed deepened to #3b6fd4 for 4.5:1 on white */
-    --accent-color: #3b6fd4;
-    --accent-hover: #2f5cb3;
-    --text-on-accent: #ffffff;
-
-    --border-color: #dfe8f1;
-    --border-soft: #ecf4ff;
-    --shadow-color: rgba(2, 35, 82, 0.08);
-
-    --bg-muted: #ecf4ff;
-    --table-head-bg: #ecf4ff;
-    --table-head-text: #022352;
-
-    --focus-ring: #3b6fd4;
-}
-
 textarea {
     font-family: monospace;
 }
@@ -59,37 +22,61 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-
-/* Mode-invariance: pin every token the dark/light toggle would
-   otherwise flip, so the theme renders identically in both modes. */
 :root {
-    --bg-code: #eaeaea;
+    --shadow-color: rgba(2, 35, 82, 0.08);
 }
 
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #3b6fd4;
-    --accent-hover: #2f5cb3;
-    --bg-code: #eaeaea;
-    --bg-hover: #ecf4ff;
-    --bg-muted: #ecf4ff;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #ffffff;
     --bg-secondary: #ffffff;
     --bg-sidebar: #ffffff;
-    --border-color: #dfe8f1;
-    --focus-ring: #3b6fd4;
-    --sidebar-item-hover-bg: #ecf4ff;
-    --sidebar-item-hover-text: #022352;
-    --sidebar-section-bg: #ecf4ff;
-    --sidebar-section-text: #022352;
-    --sidebar-text: #121212;
-    --sidebar-text-muted: #6e6e6e;
-    --table-head-bg: #ecf4ff;
-    --table-head-text: #022352;
-    --text-heading: #022352;
-    --text-on-accent: #ffffff;
+    --bg-hover: #ecf4ff;
+    --bg-muted: #ecf4ff;
+    --bg-code: #eaeaea;
     --text-primary: #121212;
     --text-secondary: #6e6e6e;
+    --text-heading: #022352;
+    --accent-color: #3b6fd4;
+    --accent-hover: #2f5cb3;
+    --text-on-accent: #ffffff;
+    --focus-ring: #3b6fd4;
+    --border-color: #dfe8f1;
+    --table-head-bg: #ecf4ff;
+    --table-head-text: #022352;
+    --sidebar-text: #121212;
+    --sidebar-text-muted: #6e6e6e;
+    --sidebar-section-bg: #ecf4ff;
+    --sidebar-section-text: #022352;
+    --sidebar-item-hover-bg: #ecf4ff;
+    --sidebar-item-hover-text: #022352;
+    --border-soft: #ecf4ff;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13161b;
+    --bg-secondary: #191d24;
+    --bg-sidebar: #101217;
+    --bg-hover: #242933;
+    --bg-muted: #191d24;
+    --bg-code: #1f242d;
+    --text-primary: #e3e5e8;
+    --text-secondary: #acb1b9;
+    --text-heading: #f1f2f3;
+    --accent-color: #5c88db;
+    --accent-hover: #7da0e2;
+    --text-on-accent: #101010;
+    --focus-ring: #5c88db;
+    --border-color: #323a48;
+    --table-head-bg: #5c88db;
+    --table-head-text: #101010;
+    --sidebar-text: #acb1b9;
+    --sidebar-text-muted: #acb1b9;
+    --sidebar-section-bg: #5c88db;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242933;
+    --sidebar-item-hover-text: #e3e5e8;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

@@ -9,82 +9,67 @@
 */
 
 :root {
-    /* surfaces: body/header/sidebar -> content -> controls */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #151516;
     --bg-secondary: #18191a;
+    --bg-sidebar: #151516;
     --bg-hover: #202124;
     --bg-muted: #202124;
     --bg-code: #202124;
-
-    /* text: content text was #d9d9d9, chrome text #bbb */
     --text-primary: #d9d9d9;
     --text-secondary: #858c99;
     --text-heading: #ececec;
-
-    /* sidebar shared the body surface; hover was the #202124 control tone */
-    --bg-sidebar: #151516;
+    --accent-color: #817fe0;
+    --accent-hover: #9a98e8;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #605ed8;
+    --border-color: #212327;
+    --table-head-bg: #202124;
+    --table-head-text: #bbbbbb;
     --sidebar-text: #d7d7d9;
     --sidebar-text-muted: #a9aaad;
     --sidebar-section-bg: #18191a;
     --sidebar-section-text: #bbbbbb;
     --sidebar-item-hover-bg: #202124;
     --sidebar-item-hover-text: #d7d7d9;
-
-    /* accent (WCAG-adjusted indigo, readable on all three surfaces) */
-    --accent-color: #817fe0;
-    --accent-hover: #9a98e8;
-    --text-on-accent: #1f1f1f;
-    --focus-ring: #605ed8;
-
-    /* hairline #212327 borders kept the theme almost seamless */
-    --border-color: #212327;
-    --border-soft: #1c1d20;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-
-    /* tables drew only a colored head row on the flat surface */
-    --table-head-bg: #202124;
-    --table-head-text: #bbbbbb;
-
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
     --skeleton-base: #202124;
     --skeleton-shine: #2b2c30;
+    --border-soft: #1c1d20;
 }
 
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
-    --accent-color: #817fe0;
-    --accent-hover: #9a98e8;
-    --bg-code: #202124;
-    --bg-hover: #202124;
-    --bg-muted: #202124;
     --bg-primary: #151516;
     --bg-secondary: #18191a;
     --bg-sidebar: #151516;
-    --border-color: #212327;
-    --focus-ring: #605ed8;
-    --sidebar-item-hover-bg: #202124;
-    --sidebar-item-hover-text: #d7d7d9;
-    --sidebar-section-bg: #18191a;
-    --sidebar-section-text: #bbbbbb;
-    --sidebar-text: #d7d7d9;
-    --sidebar-text-muted: #a9aaad;
-    --table-head-bg: #202124;
-    --table-head-text: #bbbbbb;
-    --text-heading: #ececec;
-    --text-on-accent: #1f1f1f;
+    --bg-hover: #202124;
+    --bg-muted: #202124;
+    --bg-code: #202124;
     --text-primary: #d9d9d9;
     --text-secondary: #858c99;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #ececec;
+    --accent-color: #817fe0;
+    --accent-hover: #9a98e8;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #605ed8;
+    --border-color: #212327;
+    --table-head-bg: #202124;
+    --table-head-text: #bbbbbb;
+    --sidebar-text: #d7d7d9;
+    --sidebar-text-muted: #a9aaad;
+    --sidebar-section-bg: #18191a;
+    --sidebar-section-text: #bbbbbb;
+    --sidebar-item-hover-bg: #202124;
+    --sidebar-item-hover-text: #d7d7d9;
     --sidebar-item-active-text: #1f1f1f;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
     --sidebar-item-active-text: #1f1f1f;
+    --skeleton-base: #202124;
+    --skeleton-shine: #2b2c30;
+    --border-soft: #1c1d20;
 }

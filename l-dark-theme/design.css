@@ -7,73 +7,63 @@
 */
 
 :root {
-    --bg-primary: #141414;
-    --bg-secondary: #222222;
-    --bg-hover: #2c2b2b;
-    --text-primary: #ffffff;
-    --text-secondary: #c9c9e2;
-    --text-heading: #e9e9ff;
-
-    --bg-sidebar: #000000;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #e9e9ff;
-    --sidebar-section-bg: #000000;
-    --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #323232;
-    --sidebar-item-hover-text: #ffffff;
-
-    /* the original's success green, promoted to the accent */
-    --accent-color: #07df07;
-    --accent-hover: #0bc00b;
-    --text-on-accent: #062406;
-
-    --border-color: #383d42;
-    --border-soft: #2a2d31;
     --shadow-color: rgba(0, 0, 0, 0.6);
-    --bg-muted: #1c1c1c;
-    --bg-code: #100f0f;
-    --table-head-bg: #282727;
-    --table-head-text: #ffffff;
-
-    --focus-ring: #07df07;
 }
 
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #07df07;
-    --accent-hover: #0bc00b;
-    --bg-code: #100f0f;
-    --bg-hover: #2c2b2b;
-    --bg-muted: #1c1c1c;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #141414;
     --bg-secondary: #222222;
     --bg-sidebar: #000000;
-    --border-color: #383d42;
-    --focus-ring: #07df07;
-    --sidebar-item-hover-bg: #323232;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-section-bg: #000000;
-    --sidebar-section-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #e9e9ff;
-    --table-head-bg: #282727;
-    --table-head-text: #ffffff;
-    --text-heading: #e9e9ff;
-    --text-on-accent: #062406;
+    --bg-hover: #2c2b2b;
+    --bg-muted: #1c1c1c;
+    --bg-code: #100f0f;
     --text-primary: #ffffff;
     --text-secondary: #c9c9e2;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #e9e9ff;
+    --accent-color: #07df07;
+    --accent-hover: #0bc00b;
+    --text-on-accent: #062406;
+    --focus-ring: #07df07;
+    --border-color: #383d42;
+    --table-head-bg: #282727;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #e9e9ff;
+    --sidebar-section-bg: #000000;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #323232;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #4c4c4c;
+    --sidebar-item-active-text: #4c4c4c;
+    --border-soft: #2a2d31;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
+    --bg-primary: #141414;
+    --bg-secondary: #222222;
+    --bg-sidebar: #000000;
+    --bg-hover: #2c2b2b;
+    --bg-muted: #1c1c1c;
+    --bg-code: #100f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #c9c9e2;
+    --text-heading: #e9e9ff;
+    --accent-color: #07df07;
+    --accent-hover: #0bc00b;
+    --text-on-accent: #062406;
+    --focus-ring: #07df07;
+    --border-color: #383d42;
+    --table-head-bg: #282727;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #e9e9ff;
+    --sidebar-section-bg: #000000;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #323232;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #4c4c4c;
+    --sidebar-item-active-text: #4c4c4c;
+    --border-soft: #2a2d31;
 }

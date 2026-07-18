@@ -11,44 +11,6 @@
     no longer exist in the panel.
 */
 
-:root {
-    /* Original palette: charcoal content #1a1c21, near-black chrome
-       (header/sidebar/panels) #0d0e12, borders #393e46, pill-hover
-       #26272f, grey scrollbar/arrow text #babac0, white text, and
-       cornflower-blue #6495ed tile/button accent. */
-    --bg-primary: #1a1c21;
-    --bg-secondary: #0d0e12;
-    --bg-hover: #26272f;
-
-    --text-primary: #ffffff;
-    --text-secondary: #babac0;
-    --text-heading: #ffffff;
-
-    --bg-sidebar: #0d0e12;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #babac0;
-    --sidebar-section-bg: #1a1c21;
-    --sidebar-section-text: #babac0;
-    --sidebar-item-hover-bg: #26272f;
-    --sidebar-item-hover-text: #ffffff;
-
-    /* dark label on cornflower: white on #6495ed is only ~3:1 */
-    --accent-color: #6495ed;
-    --accent-hover: #82aaf0;
-    --text-on-accent: #0d0e12;
-
-    --border-color: #393e46;
-    --border-soft: #26272f;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-
-    --bg-muted: #26272f;
-    --bg-code: #0d0e12;
-    --table-head-bg: #0d0e12;
-    --table-head-text: #ffffff;
-
-    --focus-ring: #6495ed;
-}
-
 textarea {
     font-family: monospace;
 }
@@ -57,42 +19,64 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
 
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #6495ed;
-    --accent-hover: #82aaf0;
-    --bg-code: #0d0e12;
-    --bg-hover: #26272f;
-    --bg-muted: #26272f;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #1a1c21;
     --bg-secondary: #0d0e12;
     --bg-sidebar: #0d0e12;
-    --border-color: #393e46;
-    --focus-ring: #6495ed;
-    --sidebar-item-hover-bg: #26272f;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-section-bg: #1a1c21;
-    --sidebar-section-text: #babac0;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #babac0;
-    --table-head-bg: #0d0e12;
-    --table-head-text: #ffffff;
-    --text-heading: #ffffff;
-    --text-on-accent: #0d0e12;
+    --bg-hover: #26272f;
+    --bg-muted: #26272f;
+    --bg-code: #0d0e12;
     --text-primary: #ffffff;
     --text-secondary: #babac0;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #ffffff;
+    --accent-color: #6495ed;
+    --accent-hover: #82aaf0;
+    --text-on-accent: #0d0e12;
+    --focus-ring: #6495ed;
+    --border-color: #393e46;
+    --table-head-bg: #0d0e12;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #babac0;
+    --sidebar-section-bg: #1a1c21;
+    --sidebar-section-text: #babac0;
+    --sidebar-item-hover-bg: #26272f;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #2e2e2e;
+    --sidebar-item-active-text: #2e2e2e;
+    --border-soft: #26272f;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
+    --bg-primary: #1a1c21;
+    --bg-secondary: #0d0e12;
+    --bg-sidebar: #0d0e12;
+    --bg-hover: #26272f;
+    --bg-muted: #26272f;
+    --bg-code: #0d0e12;
+    --text-primary: #ffffff;
+    --text-secondary: #babac0;
+    --text-heading: #ffffff;
+    --accent-color: #6495ed;
+    --accent-hover: #82aaf0;
+    --text-on-accent: #0d0e12;
+    --focus-ring: #6495ed;
+    --border-color: #393e46;
+    --table-head-bg: #0d0e12;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #babac0;
+    --sidebar-section-bg: #1a1c21;
+    --sidebar-section-text: #babac0;
+    --sidebar-item-hover-bg: #26272f;
+    --sidebar-item-hover-text: #ffffff;
     --sidebar-item-active-text: #2e2e2e;
+    --sidebar-item-active-text: #2e2e2e;
+    --border-soft: #26272f;
 }

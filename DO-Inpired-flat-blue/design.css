@@ -7,35 +7,6 @@
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
 */
 
-:root {
-    --theme-color-0: #4040c5;
-    --theme-color-1: #303092;
-    --theme-color-2: #202062;
-    --theme-color-3: #101052;
-
-    /* light content, deep blue sidebar — the DO-inspired flat look */
-    --bg-primary: #f4f5f9;
-    --bg-secondary: #ffffff;
-    --bg-hover: #e9ebf3;
-    --text-primary: #24292f;
-    --text-secondary: #57606a;
-    --text-heading: #1b1f24;
-    --border-color: #dfe2ea;
-
-    --bg-sidebar: var(--theme-color-1);
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #ffffff;
-    --sidebar-section-bg: var(--theme-color-2);
-    --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: var(--theme-color-2);
-    --sidebar-item-hover-text: #ffffff;
-
-    --accent-color: #303092;
-    --accent-hover: #202062;
-    --text-on-accent: #ffffff;
-    --focus-ring: #4040c5;
-}
-
 textarea {
     font-family: monospace;
 }
@@ -49,76 +20,67 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0;
 }
 
-
-/* Mode-invariance: pin every token the dark/light toggle would
-   otherwise flip, so the theme renders identically in both modes. */
 :root {
-    --bg-code: #d8dcea;
-    --bg-muted: #f4f5f9;
-    --table-head-bg: #303092;
-    --table-head-text: #ffffff;
+    --theme-color-0: #4040c5;
+    --theme-color-1: #303092;
+    --theme-color-2: #202062;
+    --theme-color-3: #101052;
 }
 
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #303092;
-    --accent-hover: #202062;
-    --bg-code: #d8dcea;
-    --bg-hover: #e9ebf3;
-    --bg-muted: #f4f5f9;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #f4f5f9;
     --bg-secondary: #ffffff;
     --bg-sidebar: #303092;
-    --border-color: #dfe2ea;
-    --focus-ring: #4040c5;
-    --sidebar-item-hover-bg: #202062;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-section-bg: #202062;
-    --sidebar-section-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #ffffff;
-    --table-head-bg: #303092;
-    --table-head-text: #ffffff;
-    --text-heading: #1b1f24;
-    --text-on-accent: #ffffff;
+    --bg-hover: #e9ebf3;
+    --bg-muted: #f4f5f9;
+    --bg-code: #d8dcea;
     --text-primary: #24292f;
     --text-secondary: #57606a;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #1b1f24;
+    --accent-color: #303092;
+    --accent-hover: #202062;
+    --text-on-accent: #ffffff;
     --focus-ring: #7f7fd8;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --focus-ring: #7f7fd8;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --border-color: #dfe2ea;
+    --table-head-bg: #303092;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #ffffff;
+    --sidebar-section-bg: #202062;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #202062;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-item-active-text: #242424;
     --sidebar-item-active-bg: #8484d7;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
-    --sidebar-item-active-bg: #8484d7;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
     --sidebar-item-active-text: #242424;
 }
 
-
-/* WCAG contrast fixes (dark mode). */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
-    --sidebar-item-active-text: #242424;
+    --bg-primary: #13131b;
+    --bg-secondary: #191924;
+    --bg-sidebar: #101017;
+    --bg-hover: #242433;
+    --bg-muted: #191924;
+    --bg-code: #1f1f2d;
+    --text-primary: #e3e3e8;
+    --text-secondary: #acacb9;
+    --text-heading: #f1f1f3;
+    --accent-color: #7d7dd4;
+    --accent-hover: #9c9cde;
+    --text-on-accent: #101010;
+    --focus-ring: #7d7dd4;
+    --border-color: #323248;
+    --table-head-bg: #7d7dd4;
+    --table-head-text: #101010;
+    --sidebar-text: #acacb9;
+    --sidebar-text-muted: #acacb9;
+    --sidebar-section-bg: #7d7dd4;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242433;
+    --sidebar-item-hover-text: #e3e3e8;
+    --sidebar-item-active-text: #101010;
+    --sidebar-item-active-bg: #7d7dd4;
+    --sidebar-item-active-text: #101010;
 }

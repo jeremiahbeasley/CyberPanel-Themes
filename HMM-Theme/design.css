@@ -18,49 +18,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 /* Original theme palette, kept for provenance */
-:root {
-    --theme-color-0: #1679ab;
-    --theme-color-1: #050c9c;
-    --theme-color-2: #111111;
-    --theme-color-3: #101052;
-}
 
-:root {
-    /* Original palette: pink-tinted page #fff7fc, white sidebar and
-       cards with #cecece / #f2f2f2 hairlines and hovers, ink text
-       #292929 with #1a2130 Outfit headings, deep-blue brand
-       #050c9c (hover #111111, active #101052), inputs #fafbfc. */
-    --bg-primary: #fff7fc;
-    --bg-secondary: #ffffff;
-    --bg-hover: #f2f2f2;
 
-    --text-primary: #292929;
-    --text-secondary: #595959;
-    --text-heading: #1a2130;
 
-    --bg-sidebar: #ffffff;
-    --sidebar-text: #292929;
-    --sidebar-text-muted: #595959;
-    --sidebar-section-bg: #ffffff;
-    --sidebar-section-text: #050c9c;
-    --sidebar-item-hover-bg: #f2f2f2;
-    --sidebar-item-hover-text: #050c9c;
-
-    --accent-color: #050c9c;
-    --accent-hover: #111111;
-    --text-on-accent: #ffffff;
-
-    --border-color: #cecece;
-    --border-soft: #f2f2f2;
-    --shadow-color: rgba(17, 17, 17, 0.08);
-
-    --bg-muted: #fafbfc;
-    --bg-code: #f2f2f2;
-    --table-head-bg: #f2f2f2;
-    --table-head-text: #1a2130;
-
-    --focus-ring: #050c9c;
-}
 
 body {
     font-family: "Be Vietnam Pro", sans-serif;
@@ -75,30 +35,65 @@ textarea {
     font-family: "Source Code Pro", monospace;
 }
 
+:root {
+    --theme-color-0: #1679ab;
+    --theme-color-1: #050c9c;
+    --theme-color-2: #111111;
+    --theme-color-3: #101052;
+    --shadow-color: rgba(17, 17, 17, 0.08);
+}
 
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
-[data-theme="dark"] {
-    --accent-color: #050c9c;
-    --accent-hover: #111111;
-    --bg-code: #f2f2f2;
-    --bg-hover: #f2f2f2;
-    --bg-muted: #fafbfc;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #fff7fc;
     --bg-secondary: #ffffff;
     --bg-sidebar: #ffffff;
-    --border-color: #cecece;
-    --focus-ring: #050c9c;
-    --sidebar-item-hover-bg: #f2f2f2;
-    --sidebar-item-hover-text: #050c9c;
-    --sidebar-section-bg: #ffffff;
-    --sidebar-section-text: #050c9c;
-    --sidebar-text: #292929;
-    --sidebar-text-muted: #595959;
-    --table-head-bg: #f2f2f2;
-    --table-head-text: #1a2130;
-    --text-heading: #1a2130;
-    --text-on-accent: #ffffff;
+    --bg-hover: #f2f2f2;
+    --bg-muted: #fafbfc;
+    --bg-code: #f2f2f2;
     --text-primary: #292929;
     --text-secondary: #595959;
+    --text-heading: #1a2130;
+    --accent-color: #050c9c;
+    --accent-hover: #111111;
+    --text-on-accent: #ffffff;
+    --focus-ring: #050c9c;
+    --border-color: #cecece;
+    --table-head-bg: #f2f2f2;
+    --table-head-text: #1a2130;
+    --sidebar-text: #292929;
+    --sidebar-text-muted: #595959;
+    --sidebar-section-bg: #ffffff;
+    --sidebar-section-text: #050c9c;
+    --sidebar-item-hover-bg: #f2f2f2;
+    --sidebar-item-hover-text: #050c9c;
+    --border-soft: #f2f2f2;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13131b;
+    --bg-secondary: #191a24;
+    --bg-sidebar: #101017;
+    --bg-hover: #242433;
+    --bg-muted: #191a24;
+    --bg-code: #1f202d;
+    --text-primary: #e3e4e8;
+    --text-secondary: #acadb9;
+    --text-heading: #f1f2f3;
+    --accent-color: #7379fa;
+    --accent-hover: #9a9ffb;
+    --text-on-accent: #101010;
+    --focus-ring: #7379fa;
+    --border-color: #323348;
+    --table-head-bg: #7379fa;
+    --table-head-text: #101010;
+    --sidebar-text: #acadb9;
+    --sidebar-text-muted: #acadb9;
+    --sidebar-section-bg: #7379fa;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242433;
+    --sidebar-item-hover-text: #e3e4e8;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

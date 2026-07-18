@@ -9,81 +9,67 @@
 */
 
 :root {
-    /* layered blue-gray surfaces: content -> cards -> hover */
+    --shadow-color: rgba(69, 74, 83, 0.63);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
     --bg-primary: #22282b;
     --bg-secondary: #282f32;
+    --bg-sidebar: #2f373a;
     --bg-hover: #3a4346;
     --bg-muted: #282f32;
     --bg-code: #202124;
-
-    /* text: #e0e4e6 body, #adb3b6 secondary/links */
     --text-primary: #e0e4e6;
     --text-secondary: #adb3b6;
     --text-heading: #e6eaec;
-
-    /* sidebar sat one step lighter than content, with #3a4346 headers/hover */
-    --bg-sidebar: #2f373a;
+    --accent-color: #918fe5;
+    --accent-hover: #a5a3ea;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #7877de;
+    --border-color: #454a53;
+    --table-head-bg: #2f373a;
+    --table-head-text: #dfe4e6;
     --sidebar-text: #dfe4e6;
     --sidebar-text-muted: #9ba1ac;
     --sidebar-section-bg: #3a4346;
     --sidebar-section-text: #dfe4e6;
     --sidebar-item-hover-bg: #3a4346;
     --sidebar-item-hover-text: #d7d7d9;
-
-    /* accent (WCAG-adjusted indigo, lightened for the softer surfaces) */
-    --accent-color: #918fe5;
-    --accent-hover: #a5a3ea;
-    --text-on-accent: #1f1f1f;
-    --focus-ring: #7877de;
-
-    /* borders were clearly visible here, unlike the flat dark theme */
-    --border-color: #454a53;
-    --border-soft: #3a4045;
-    --shadow-color: rgba(69, 74, 83, 0.63);
-
-    --table-head-bg: #2f373a;
-    --table-head-text: #dfe4e6;
-
+    --sidebar-item-active-text: #2e2e2e;
+    --sidebar-item-active-text: #2e2e2e;
     --skeleton-base: #2f373a;
     --skeleton-shine: #454a53;
+    --border-soft: #3a4045;
 }
 
-
-/* Dark-toggle palette: explicit so the moon icon renders a
-   theme-controlled (and audited) look. Tune freely. */
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
 [data-theme="dark"] {
-    --accent-color: #918fe5;
-    --accent-hover: #a5a3ea;
-    --bg-code: #202124;
-    --bg-hover: #3a4346;
-    --bg-muted: #282f32;
     --bg-primary: #22282b;
     --bg-secondary: #282f32;
     --bg-sidebar: #2f373a;
-    --border-color: #454a53;
-    --focus-ring: #7877de;
-    --sidebar-item-hover-bg: #3a4346;
-    --sidebar-item-hover-text: #d7d7d9;
-    --sidebar-section-bg: #3a4346;
-    --sidebar-section-text: #dfe4e6;
-    --sidebar-text: #dfe4e6;
-    --sidebar-text-muted: #9ba1ac;
-    --table-head-bg: #2f373a;
-    --table-head-text: #dfe4e6;
-    --text-heading: #e6eaec;
-    --text-on-accent: #1f1f1f;
+    --bg-hover: #3a4346;
+    --bg-muted: #282f32;
+    --bg-code: #202124;
     --text-primary: #e0e4e6;
     --text-secondary: #adb3b6;
-}
-
-
-/* WCAG contrast fixes (light mode). */
-:root {
+    --text-heading: #e6eaec;
+    --accent-color: #918fe5;
+    --accent-hover: #a5a3ea;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #7877de;
+    --border-color: #454a53;
+    --table-head-bg: #2f373a;
+    --table-head-text: #dfe4e6;
+    --sidebar-text: #dfe4e6;
+    --sidebar-text-muted: #9ba1ac;
+    --sidebar-section-bg: #3a4346;
+    --sidebar-section-text: #dfe4e6;
+    --sidebar-item-hover-bg: #3a4346;
+    --sidebar-item-hover-text: #d7d7d9;
     --sidebar-item-active-text: #2e2e2e;
-}
-
-
-/* WCAG contrast fixes (dark mode). */
-[data-theme="dark"] {
     --sidebar-item-active-text: #2e2e2e;
+    --skeleton-base: #2f373a;
+    --skeleton-shine: #454a53;
+    --border-soft: #3a4045;
 }
