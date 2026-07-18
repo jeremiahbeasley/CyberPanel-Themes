@@ -30,7 +30,17 @@ DEFAULTS = {
     'bg-hover': '#eef0f4', 'text-primary': '#2f3640', 'text-secondary': '#6b7280',
     'text-heading': '#1e293b', 'accent-color': '#5856d6', 'text-on-accent': '#ffffff',
     'focus-ring': '#5856d6',
+    'sidebar-text': '#6b7280', 'sidebar-text-muted': '#6b7280',
+    'sidebar-section-bg': '#5856d6', 'sidebar-section-text': '#ffffff',
+    'sidebar-item-hover-bg': '#eef0f4', 'sidebar-item-hover-text': '#5856d6',
 }
+# token -> token it falls back to in the panel CSS when undefined
+FALLBACK_TOKEN = {
+    'sidebar-text': 'text-secondary', 'sidebar-text-muted': 'text-secondary',
+    'sidebar-item-hover-bg': 'bg-hover', 'sidebar-item-hover-text': 'accent-color',
+    'sidebar-section-bg': 'accent-color',
+}
+
 # legacy var -> token it bridges to
 BRIDGE = {
     'background-color-second': 'bg-primary', 'background-color-third': 'bg-secondary',
@@ -57,6 +67,9 @@ TOKEN_PAIRS = [
     ('accent-color', 'bg-primary', 4.5), ('accent-color', 'bg-secondary', 4.5),
     ('focus-ring', 'bg-primary', 3.0), ('focus-ring', 'bg-secondary', 3.0),
     ('focus-ring', 'bg-sidebar', 3.0),
+    ('sidebar-text', 'bg-sidebar', 4.5),
+    ('sidebar-section-text', 'sidebar-section-bg', 4.5),
+    ('sidebar-item-hover-text', 'sidebar-item-hover-bg', 4.5),
 ]
 NAMED = {'white': '#ffffff', 'black': '#000000', 'transparent': None}
 
@@ -162,6 +175,8 @@ for theme in themes:
             for v in cands:
                 if v in decl:
                     return decl[v], v
+        if token in FALLBACK_TOKEN:
+            return resolve(FALLBACK_TOKEN[token])
         return DEFAULTS.get(token), None
 
     fails, fixes = [], {}   # fixes: declared-var-name -> new hex
@@ -176,6 +191,10 @@ for theme in themes:
             continue
         r = ratio(fg, bg)
         if r < need:
+            # sidebar-* pairs: fix by declaring the sidebar token itself, never
+            # by mutating the token it falls back to (e.g. the theme accent)
+            if fg_t.startswith('sidebar-'):
+                fg_src = None
             fails.append((fg_t, bg_t, r, need, fg_src))
     if legacy:
         for fg_v, bg_v_name, need in LEGACY_PAIRS:
