@@ -45,3 +45,10 @@
 
     --focus-ring: #c76600;
 }
+
+
+/* Mode-invariance: pin every token the dark/light toggle would
+   otherwise flip, so the theme renders identically in both modes. */
+:root {
+    --bg-code: #e0d596;
+}

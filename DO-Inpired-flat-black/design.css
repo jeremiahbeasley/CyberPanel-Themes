@@ -48,3 +48,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn:not(.toggle) {
     border-width: 0;
 }
+
+
+/* Mode-invariance: pin every token the dark/light toggle would
+   otherwise flip, so the theme renders identically in both modes. */
+:root {
+    --bg-code: #d8dcea;
+    --bg-muted: #f4f5f9;
+    --table-head-bg: #24292f;
+    --table-head-text: #ffffff;
+}

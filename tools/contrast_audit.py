@@ -22,7 +22,24 @@ Usage: python3 tools/contrast_audit.py [--fix] [themes-root]
 import os, re, sys, colorsys
 
 FIX = '--fix' in sys.argv
+COMPLETE = '--complete' in sys.argv
+DARK = '--dark' in sys.argv
 ROOT = next((a for a in sys.argv[1:] if not a.startswith('-')), '.')
+
+# Stock DARK tokens (the [data-theme=dark] block): what an undefined var
+# resolves to when the user has the dark-mode toggle on. Run with --dark to
+# audit that mode — a theme passes WCAG only if it passes BOTH modes.
+DEFAULTS_DARK = {
+    'bg-primary': '#15161b', 'bg-secondary': '#1d1f26', 'bg-sidebar': '#191a20',
+    'bg-hover': '#272a33', 'text-primary': '#e4e4e7', 'text-secondary': '#9aa1ad',
+    'text-heading': '#f3f4f6', 'accent-color': '#7c7ff3', 'text-on-accent': '#15161b',
+    'accent-hover': '#8b8ef5', 'focus-ring': '#a5a3f0',
+    'bg-muted': '#1d1f26', 'bg-code': '#23252d',
+    'table-head-bg': '#3b3f9e', 'table-head-text': '#f3f4f6',
+    'sidebar-text': '#9aa1ad', 'sidebar-text-muted': '#9aa1ad',
+    'sidebar-section-bg': '#7c7ff3', 'sidebar-section-text': '#ffffff',
+    'sidebar-item-hover-bg': '#272a33', 'sidebar-item-hover-text': '#7c7ff3',
+}
 
 # Stock light tokens = what an undefined var falls back to (panel + bridge)
 DEFAULTS = {
@@ -33,7 +50,11 @@ DEFAULTS = {
     'sidebar-text': '#6b7280', 'sidebar-text-muted': '#6b7280',
     'sidebar-section-bg': '#5856d6', 'sidebar-section-text': '#ffffff',
     'sidebar-item-hover-bg': '#eef0f4', 'sidebar-item-hover-text': '#5856d6',
+    'accent-hover': '#4644c0', 'bg-muted': '#f6f7f9', 'bg-code': '#f3f4f6',
+    'table-head-bg': '#5b5fcf', 'table-head-text': '#ffffff',
 }
+if DARK:
+    DEFAULTS = DEFAULTS_DARK
 # token -> token it falls back to in the panel CSS when undefined
 FALLBACK_TOKEN = {
     'sidebar-text': 'text-secondary', 'sidebar-text-muted': 'text-secondary',
@@ -70,6 +91,9 @@ TOKEN_PAIRS = [
     ('sidebar-text', 'bg-sidebar', 4.5),
     ('sidebar-section-text', 'sidebar-section-bg', 4.5),
     ('sidebar-item-hover-text', 'sidebar-item-hover-bg', 4.5),
+    ('text-primary', 'bg-muted', 4.5), ('text-primary', 'bg-code', 4.5),
+    ('table-head-text', 'table-head-bg', 4.5),
+    ('text-on-accent', 'accent-hover', 4.5),
 ]
 NAMED = {'white': '#ffffff', 'black': '#000000', 'transparent': None}
 
@@ -153,15 +177,72 @@ def get_vars(css):
     return out
 
 
+def shade(rgb, delta):
+    """shift lightness by delta (darken if positive luminance direction given)"""
+    h, l, sv = colorsys.rgb_to_hls(*(c / 255 for c in rgb))
+    return colorsys_rgb(h, min(1.0, max(0.0, l + delta)), sv)
+
+
+def complete_theme(decl):
+    """Tokens to pin so the theme renders identically in light and dark mode
+    (any token left unset flips with the [data-theme] toggle)."""
+    if 'bg-primary' not in decl:
+        return {}
+    get = lambda t, d=None: decl.get(t, d)
+    bgp = parse_color(get('bg-primary'))
+    if not bgp:
+        return {}
+    dark_theme = lum(bgp) < 0.5
+    step = 0.06 if dark_theme else -0.06
+    out = {}
+    def pin(tok, val):
+        if tok not in decl and val:
+            out[tok] = val if isinstance(val, str) else hex_of(val)
+    pin('bg-secondary', get('bg-primary'))
+    bgs_v = get('bg-secondary', out.get('bg-secondary', get('bg-primary')))
+    pin('bg-sidebar', get('bg-primary'))
+    pin('bg-hover', shade(bgp, step))
+    pin('bg-muted', get('bg-primary'))
+    pin('bg-code', shade(bgp, step * 1.4))
+    pin('text-secondary', get('text-primary'))
+    pin('text-heading', get('text-primary'))
+    acc_v = get('accent-color')
+    if acc_v:
+        acc = parse_color(acc_v)
+        if acc:
+            pin('accent-hover', shade(acc, 0.08 if dark_theme else -0.08))
+            if 'text-on-accent' not in decl:
+                pin('text-on-accent', '#ffffff' if ratio((255, 255, 255), acc) >= ratio((16, 16, 16), acc) else '#101010')
+            pin('table-head-bg', acc_v)
+            pin('table-head-text', get('text-on-accent', out.get('text-on-accent')))
+            pin('focus-ring', acc_v)
+        pin('border-color', hex_of(shade(bgp, step * 2)))
+    return out
+
+
 report, total_fail, total_fixed = [], 0, 0
+# legacy-* dirs are archived pre-2.4 theme versions kept for history; they are
+# superseded by their *-v2 ports and no longer served by the panel's catalog.
 themes = sorted(d for d in os.listdir(ROOT)
-                if os.path.isdir(os.path.join(ROOT, d)) and not d.startswith(('.', 'tools')))
+                if os.path.isdir(os.path.join(ROOT, d)) and not d.startswith(('.', 'tools', 'legacy-')))
 for theme in themes:
     path = os.path.join(ROOT, theme, 'design.css')
     if not os.path.exists(path):
         continue
     css = open(path, encoding='utf-8', errors='replace', newline='').read()
     decl = get_vars(css)
+    if COMPLETE:
+        add = complete_theme(decl)
+        if add:
+            nl = '\r\n' if '\r\n' in css else '\n'
+            block = (nl * 2 + '/* Mode-invariance: pin every token the dark/light toggle would' + nl
+                     + '   otherwise flip, so the theme renders identically in both modes. */' + nl
+                     + ':root {' + nl)
+            block += ''.join('    --%s: %s;%s' % (k, v, nl) for k, v in sorted(add.items()))
+            block += '}' + nl
+            css += block
+            open(path, 'w', encoding='utf-8', newline='').write(css)
+            decl = get_vars(css)
     legacy = 'bg-primary' not in decl
 
     def resolve(token):
