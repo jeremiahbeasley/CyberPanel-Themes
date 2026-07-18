@@ -290,7 +290,7 @@ h1#loginFormTitle,
 :root {
     --bg-primary: #f6f6f6;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #050505;
+    --bg-sidebar: #f1f1f1;
     --bg-hover: #ebebeb;
     --bg-muted: #f4f4f4;
     --bg-code: #eeeeee;
@@ -304,11 +304,15 @@ h1#loginFormTitle,
     --border-color: #dbdbdb;
     --table-head-bg: #707070;
     --table-head-text: #ffffff;
-    --sidebar-text: #7b7b7b;
-    --sidebar-section-text: #f5f5f5;
-    --sidebar-item-hover-text: #686868;
-    --sidebar-item-active-text: #f5f5f5;
-    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-text: #333333;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-text: #262626;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-text-muted: #545454;
+    --sidebar-item-hover-bg: #e0e0e0;
+    --sidebar-section-bg: #707070;
+    --sidebar-item-active-bg: #707070;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -333,4 +337,13 @@ h1#loginFormTitle,
     --sidebar-item-hover-text: #c9c9c9;
     --sidebar-item-active-text: #525252;
     --sidebar-item-active-text: #525252;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-item-hover-text: #636363;
+    --sidebar-section-text: #f5f5f5;
+    --sidebar-text: #7a7a7a;
 }

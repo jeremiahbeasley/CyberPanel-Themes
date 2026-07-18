@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
     --bg-primary: #f5f6f7;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #0d0e12;
+    --bg-sidebar: #eff0f3;
     --bg-hover: #e9eaed;
     --bg-muted: #f2f3f5;
     --bg-code: #edeef0;
@@ -43,14 +43,15 @@ h1, h2, h3, h4, h5, h6 {
     --border-color: #d8dadf;
     --table-head-bg: #2469e6;
     --table-head-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #babac0;
-    --sidebar-section-bg: #1a1c21;
-    --sidebar-section-text: #babac0;
-    --sidebar-item-hover-bg: #26272f;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-text: #f5f5f5;
-    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-text: #2b2e3b;
+    --sidebar-text-muted: #474c62;
+    --sidebar-section-bg: #2469e6;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #dbdde5;
+    --sidebar-item-hover-text: #20232c;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #2469e6;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -80,4 +81,10 @@ h1, h2, h3, h4, h5, h6 {
     --sidebar-item-active-text: #2e2e2e;
     --sidebar-item-active-text: #2e2e2e;
     --border-soft: #26272f;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
 }

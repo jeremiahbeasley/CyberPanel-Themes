@@ -45,7 +45,7 @@ textarea {
 :root {
     --bg-primary: #f5f7f7;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #01090f;
+    --bg-sidebar: #edf2f5;
     --bg-hover: #e9eced;
     --bg-muted: #f2f5f5;
     --bg-code: #edf0f0;
@@ -59,14 +59,15 @@ textarea {
     --border-color: #d8dfdf;
     --table-head-bg: #007a80;
     --table-head-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #9fb3bf;
-    --sidebar-section-bg: #002a43;
+    --sidebar-text: #243542;
+    --sidebar-text-muted: #3b586d;
+    --sidebar-section-bg: #007a80;
     --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #002a43;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-text: #f5f5f5;
-    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-item-hover-bg: #d7e2ea;
+    --sidebar-item-hover-text: #1b2832;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #007a80;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -96,4 +97,10 @@ textarea {
     --sidebar-item-active-text: #292929;
     --sidebar-item-active-text: #292929;
     --border-soft: #142a3b;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
 }

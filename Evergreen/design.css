@@ -22,7 +22,7 @@ old-UI selectors no longer exist in the panel.
 :root {
     --bg-primary: #f5f7f5;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #141414;
+    --bg-sidebar: #edf5ed;
     --bg-hover: #e9ede9;
     --bg-muted: #f2f5f2;
     --bg-code: #edf0ed;
@@ -36,14 +36,15 @@ old-UI selectors no longer exist in the panel.
     --border-color: #d8dfd8;
     --table-head-bg: #2b7c2c;
     --table-head-text: #ffffff;
-    --sidebar-text: #dddddd;
-    --sidebar-text-muted: #b4b2b2;
-    --sidebar-section-bg: #141414;
-    --sidebar-section-text: #b4b2b2;
-    --sidebar-item-hover-bg: #11024b;
-    --sidebar-item-hover-text: #45be46;
-    --sidebar-item-active-text: #f0f0f0;
-    --sidebar-item-active-text: #f0f0f0;
+    --sidebar-text: #244224;
+    --sidebar-text-muted: #3b6d3c;
+    --sidebar-section-bg: #2b7c2c;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7ead7;
+    --sidebar-item-hover-text: #1b321b;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #2b7c2c;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -73,4 +74,10 @@ old-UI selectors no longer exist in the panel.
     --sidebar-item-active-text: #3d3d3d;
     --sidebar-item-active-text: #3d3d3d;
     --border-soft: #333333;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f0f0f0;
 }

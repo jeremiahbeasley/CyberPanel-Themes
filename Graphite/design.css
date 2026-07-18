@@ -20,7 +20,7 @@
 :root {
     --bg-primary: #f5f5f7;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #151516;
+    --bg-sidebar: #ededf5;
     --bg-hover: #e9e9ed;
     --bg-muted: #f2f2f5;
     --bg-code: #ededf0;
@@ -34,14 +34,15 @@
     --border-color: #d8d8df;
     --table-head-bg: #615ed8;
     --table-head-text: #ffffff;
-    --sidebar-text: #d7d7d9;
-    --sidebar-text-muted: #a9aaad;
-    --sidebar-section-bg: #18191a;
-    --sidebar-section-text: #bbbbbb;
-    --sidebar-item-hover-bg: #202124;
-    --sidebar-item-hover-text: #d7d7d9;
-    --sidebar-item-active-text: #f5f5f5;
-    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-text: #242442;
+    --sidebar-text-muted: #3c3b6d;
+    --sidebar-section-bg: #615ed8;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d8d7ea;
+    --sidebar-item-hover-text: #1b1b32;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #615ed8;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -73,4 +74,10 @@
     --skeleton-base: #202124;
     --skeleton-shine: #2b2c30;
     --border-soft: #1c1d20;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
 }

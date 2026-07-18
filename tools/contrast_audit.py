@@ -368,7 +368,7 @@ for theme in themes:
         for mode in ('light', 'dark'):
             decl = results[mode][2]
             resolve = make_resolver(decl, DEFAULTS_DARK if mode == 'dark' else DEFAULTS_LIGHT, legacy)
-            for tok in ('bg-primary', 'bg-secondary'):
+            for tok in ('bg-primary', 'bg-secondary', 'bg-sidebar'):
                 c = parse_color(resolve(tok)[0])
                 if not c:
                     continue

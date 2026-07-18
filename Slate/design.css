@@ -20,7 +20,7 @@
 :root {
     --bg-primary: #f5f5f7;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #2f373a;
+    --bg-sidebar: #f0f2f2;
     --bg-hover: #e9e9ed;
     --bg-muted: #f2f2f5;
     --bg-code: #ededf0;
@@ -34,15 +34,15 @@
     --border-color: #d8d8df;
     --table-head-bg: #605dd9;
     --table-head-text: #ffffff;
-    --sidebar-text: #dfe4e6;
-    --sidebar-text-muted: #9ba1ac;
-    --sidebar-section-bg: #3a4346;
-    --sidebar-section-text: #dfe4e6;
-    --sidebar-item-hover-bg: #3a4346;
-    --sidebar-item-hover-text: #d7d7d9;
-    --sidebar-item-active-text: #1a1a1a;
-    --sidebar-item-active-bg: #7876df;
-    --sidebar-item-active-text: #1a1a1a;
+    --sidebar-text: #2e3538;
+    --sidebar-text-muted: #4b585d;
+    --sidebar-section-bg: #605dd9;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #dde2e4;
+    --sidebar-item-hover-text: #22282a;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #605dd9;
+    --sidebar-item-active-text: #ffffff;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -74,4 +74,17 @@
     --skeleton-base: #2f373a;
     --skeleton-shine: #454a53;
     --border-soft: #3a4045;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-bg: #7876df;
+    --sidebar-item-active-text: #efeff2;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #18181d;
 }

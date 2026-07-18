@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
     --bg-primary: #f4f5f9;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #000000;
+    --bg-sidebar: #eff1f3;
     --bg-hover: #e9ebf3;
     --bg-muted: #f4f5f9;
     --bg-code: #d8dcea;
@@ -47,13 +47,14 @@ h1, h2, h3, h4, h5, h6 {
     --border-color: #dfe2ea;
     --table-head-bg: #24292f;
     --table-head-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #ffffff;
-    --sidebar-section-bg: #222222;
+    --sidebar-text: #2c323a;
+    --sidebar-text-muted: #49535f;
+    --sidebar-section-bg: #24292f;
     --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #222222;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-bg: #505b69;
+    --sidebar-item-hover-bg: #dce0e4;
+    --sidebar-item-hover-text: #21262b;
+    --sidebar-item-active-bg: #24292f;
+    --sidebar-item-active-text: #ffffff;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */

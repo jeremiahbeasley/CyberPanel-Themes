@@ -24,7 +24,7 @@
 :root {
     --bg-primary: #eae2b7;
     --bg-secondary: #f6efca;
-    --bg-sidebar: #003049;
+    --bg-sidebar: #edf2f5;
     --bg-hover: #ddd39e;
     --bg-muted: #f0eddb;
     --bg-code: #e0d596;
@@ -38,15 +38,15 @@
     --border-color: #d3cb87;
     --table-head-bg: #f6efca;
     --table-head-text: #003049;
-    --sidebar-text: #eae2b7;
-    --sidebar-text-muted: #fdc85e;
+    --sidebar-text: #243842;
+    --sidebar-text-muted: #3b5c6d;
     --sidebar-section-bg: #003049;
-    --sidebar-section-text: #f77f00;
-    --sidebar-item-hover-bg: #00415f;
-    --sidebar-item-hover-text: #fdc85e;
-    --sidebar-item-active-text: #0a0a0a;
-    --sidebar-item-active-bg: #0080c3;
-    --sidebar-item-active-text: #0a0a0a;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7e3ea;
+    --sidebar-item-hover-text: #1b2a32;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #003049;
+    --sidebar-item-active-text: #ffffff;
     --border-soft: #e0d9a4;
 }
 

@@ -18,7 +18,7 @@
 :root {
     --bg-primary: #f5f7f5;
     --bg-secondary: #ffffff;
-    --bg-sidebar: #000000;
+    --bg-sidebar: #edf5ed;
     --bg-hover: #e9ede9;
     --bg-muted: #f2f5f2;
     --bg-code: #edf0ed;
@@ -32,14 +32,15 @@
     --border-color: #d8dfd8;
     --table-head-bg: #047c04;
     --table-head-text: #ffffff;
-    --sidebar-text: #ffffff;
-    --sidebar-text-muted: #e9e9ff;
-    --sidebar-section-bg: #000000;
+    --sidebar-text: #244224;
+    --sidebar-text-muted: #3b6d3b;
+    --sidebar-section-bg: #047c04;
     --sidebar-section-text: #ffffff;
-    --sidebar-item-hover-bg: #323232;
-    --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-text: #efefef;
-    --sidebar-item-active-text: #efefef;
+    --sidebar-item-hover-bg: #d7ead7;
+    --sidebar-item-hover-text: #1b321b;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #047c04;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -69,4 +70,10 @@
     --sidebar-item-active-text: #4c4c4c;
     --sidebar-item-active-text: #4c4c4c;
     --border-soft: #2a2d31;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #efefef;
 }
