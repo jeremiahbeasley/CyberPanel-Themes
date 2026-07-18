@@ -1,3 +1,5 @@
+/* Formerly named "VJ-Theme-Dark-v2" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
 /* ==========================================================================
    Name: VJ-Theme-Dark-v2
    Version: 2.0
@@ -271,6 +273,8 @@ h1#loginFormTitle,
     transform: translateY(-1px) !important;
 }
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --vj-main: #323232;
     --vj-light: #5a5a5a;
@@ -284,26 +288,27 @@ h1#loginFormTitle,
 
 /* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --bg-primary: #1c1c1c;
-    --bg-secondary: #2c2c2c;
-    --bg-sidebar: #222222;
-    --bg-hover: #262626;
-    --bg-muted: #1c1c1c;
-    --bg-code: #313131;
-    --text-primary: #999999;
-    --text-secondary: #aaaaaa;
-    --text-heading: #ffffff;
-    --accent-color: #a0a0a0;
-    --accent-hover: #ffffff;
-    --text-on-accent: #333333;
-    --focus-ring: #cccccc;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --table-head-bg: #a0a0a0;
-    --table-head-text: #333333;
-    --sidebar-section-text: #333333;
-    --sidebar-item-hover-text: #c9c9c9;
-    --sidebar-item-active-text: #333333;
-    --sidebar-item-active-text: #333333;
+    --bg-primary: #f6f6f6;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #050505;
+    --bg-hover: #ebebeb;
+    --bg-muted: #f4f4f4;
+    --bg-code: #eeeeee;
+    --text-primary: #292929;
+    --text-secondary: #5c5c5c;
+    --text-heading: #1a1a1a;
+    --accent-color: #707070;
+    --accent-hover: #5c5c5c;
+    --text-on-accent: #ffffff;
+    --focus-ring: #707070;
+    --border-color: #dbdbdb;
+    --table-head-bg: #707070;
+    --table-head-text: #ffffff;
+    --sidebar-text: #7b7b7b;
+    --sidebar-section-text: #f5f5f5;
+    --sidebar-item-hover-text: #686868;
+    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-item-active-text: #f5f5f5;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
@@ -314,8 +319,8 @@ h1#loginFormTitle,
     --bg-hover: #242424;
     --bg-muted: #1c1c1c;
     --bg-code: #313131;
-    --text-primary: #989898;
-    --text-secondary: #888888;
+    --text-primary: #c6c6c6;
+    --text-secondary: #a6a6a6;
     --text-heading: #ffffff;
     --accent-color: #cccccc;
     --accent-hover: #ffffff;

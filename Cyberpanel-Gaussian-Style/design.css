@@ -15,27 +15,29 @@ textarea {
     font-family: monospace;
 }
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --shadow-color: rgba(0, 0, 0, 0.45);
 }
 
 /* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --bg-primary: #1a1533;
-    --bg-secondary: #231d41;
+    --bg-primary: #f7f7f5;
+    --bg-secondary: #ffffff;
     --bg-sidebar: #120e28;
-    --bg-hover: #363053;
-    --bg-muted: #2e2752;
-    --bg-code: #120e28;
-    --text-primary: #ffffff;
-    --text-secondary: #c9cfdd;
-    --text-heading: #ffffff;
-    --accent-color: #e0ca2d;
-    --accent-hover: #ecd83f;
-    --text-on-accent: #120e28;
-    --focus-ring: #e0ca2d;
-    --border-color: #423c5e;
-    --table-head-bg: #120e28;
+    --bg-hover: #edece9;
+    --bg-muted: #f5f4f2;
+    --bg-code: #f0f0ed;
+    --text-primary: #2d2c25;
+    --text-secondary: #656353;
+    --text-heading: #1c1b17;
+    --accent-color: #807213;
+    --accent-hover: #5c520e;
+    --text-on-accent: #ffffff;
+    --focus-ring: #807213;
+    --border-color: #dfded8;
+    --table-head-bg: #807213;
     --table-head-text: #ffffff;
     --sidebar-text: #ffffff;
     --sidebar-text-muted: #b9bdd1;
@@ -43,9 +45,8 @@ textarea {
     --sidebar-section-text: #ffffff;
     --sidebar-item-hover-bg: #363053;
     --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-text: #525252;
-    --sidebar-item-active-text: #525252;
-    --border-soft: #2e2752;
+    --sidebar-item-active-text: #fafafa;
+    --sidebar-item-active-text: #fafafa;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */

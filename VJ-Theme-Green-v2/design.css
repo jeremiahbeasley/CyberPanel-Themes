@@ -216,6 +216,8 @@ h1#loginFormTitle,
     transform: translateY(-1px) !important;
 }
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --vj-main: #3e7d58;
     --vj-light: #52b149;

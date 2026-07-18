@@ -6,6 +6,8 @@
     old-UI selectors no longer exist in the panel.)
 */
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --theme-teal: #11998e;
     --theme-green: #38ef7d;

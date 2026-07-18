@@ -6,6 +6,10 @@
     old-UI selectors no longer exist in the panel.)
 */
 
+
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --primary: #003049;
     --secondary: #f77f00;

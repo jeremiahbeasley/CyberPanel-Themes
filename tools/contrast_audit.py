@@ -25,15 +25,15 @@ COMPLETE = '--complete' in sys.argv
 ROOT = next((a for a in sys.argv[1:] if not a.startswith('-')), '.')
 
 DEFAULTS_LIGHT = {
-    'bg-primary': '#f6f7f9', 'bg-secondary': '#ffffff', 'bg-sidebar': '#fbfbfc',
-    'bg-hover': '#eef0f4', 'bg-muted': '#f6f7f9', 'bg-code': '#f3f4f6',
-    'text-primary': '#2f3640', 'text-secondary': '#6b7280', 'text-heading': '#1e293b',
+    'bg-primary': '#f4f5fa', 'bg-secondary': '#ffffff', 'bg-sidebar': '#f6f7fc',
+    'bg-hover': '#eceefb', 'bg-muted': '#f6f7f9', 'bg-code': '#f3f4f6',
+    'text-primary': '#2f3640', 'text-secondary': '#66707e', 'text-heading': '#1e293b',
     'accent-color': '#5856d6', 'accent-hover': '#4644c0', 'text-on-accent': '#ffffff',
-    'focus-ring': '#5856d6', 'border-color': '#e7e9ee',
+    'focus-ring': '#5856d6', 'border-color': '#e9ebf4',
     'table-head-bg': '#5b5fcf', 'table-head-text': '#ffffff',
-    'sidebar-text': '#6b7280', 'sidebar-text-muted': '#6b7280',
+    'sidebar-text': '#66707e', 'sidebar-text-muted': '#66707e',
     'sidebar-section-bg': '#5856d6', 'sidebar-section-text': '#ffffff',
-    'sidebar-item-hover-bg': '#eef0f4', 'sidebar-item-hover-text': '#5856d6',
+    'sidebar-item-hover-bg': '#eceefb', 'sidebar-item-hover-text': '#5856d6',
     'sidebar-item-active-text': '#ffffff',
 }
 DEFAULTS_DARK = {
@@ -362,6 +362,21 @@ for theme in themes:
 
     kind = 'legacy' if legacy else ('v2+dark' if dark_d else 'v2')
     msgs = []
+    # true-mode polarity: content surfaces must be light in light mode and
+    # dark in dark mode (the sidebar may keep a contrary identity)
+    if not legacy:
+        for mode in ('light', 'dark'):
+            decl = results[mode][2]
+            resolve = make_resolver(decl, DEFAULTS_DARK if mode == 'dark' else DEFAULTS_LIGHT, legacy)
+            for tok in ('bg-primary', 'bg-secondary'):
+                c = parse_color(resolve(tok)[0])
+                if not c:
+                    continue
+                l = lum(c)
+                if mode == 'light' and l < 0.45:
+                    msgs.append('    [light] POLARITY %s too dark (lum %.2f)' % (tok, l))
+                if mode == 'dark' and l > 0.25:
+                    msgs.append('    [dark] POLARITY %s too light (lum %.2f)' % (tok, l))
     for mode in ('light', 'dark'):
         fails, unresolved = results[mode][0], results[mode][1]
         total_fail += len(fails)

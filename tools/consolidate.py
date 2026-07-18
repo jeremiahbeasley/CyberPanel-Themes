@@ -77,6 +77,40 @@ def solve(palette, defaults):
     return palette
 
 
+def derive_light(dark_pal):
+    """Designed light companion for an originally-dark theme: light content
+    surfaces tinted with the theme hue; the dark sidebar is KEPT (it is the
+    theme's identity and sidebar text already passes against it)."""
+    acc = parse_color(dark_pal.get('accent-color')) or (88, 86, 214)
+    h, _, sat = colorsys.rgb_to_hls(*(c / 255 for c in acc))
+    tint = min(sat, 0.10)
+
+    def surf(l):
+        return hex_of(hls_rgb(h, l, tint))
+
+    d = {
+        'bg-primary': surf(0.965), 'bg-secondary': '#ffffff', 'bg-hover': surf(0.92),
+        'bg-muted': surf(0.955), 'bg-code': surf(0.935), 'border-color': surf(0.86),
+        'text-primary': hex_of(hls_rgb(h, 0.16, min(tint, 0.25))),
+        'text-secondary': hex_of(hls_rgb(h, 0.36, min(tint, 0.20))),
+        'text-heading': hex_of(hls_rgb(h, 0.10, min(tint, 0.25))),
+    }
+    la = adjust(acc, [parse_color('#ffffff'), parse_color(d['bg-primary'])], 4.5) or acc
+    d['accent-color'] = hex_of(la)
+    d['accent-hover'] = hex_of(shade(la, -0.08))
+    d['text-on-accent'] = '#ffffff' if ratio((255, 255, 255), la) >= ratio((16, 16, 16), la) else '#101010'
+    d['focus-ring'] = d['accent-color']
+    d['table-head-bg'] = d['accent-color']
+    d['table-head-text'] = d['text-on-accent']
+    # keep the theme's dark sidebar + its text tokens (identity)
+    for t in ('bg-sidebar', 'sidebar-text', 'sidebar-text-muted', 'sidebar-section-bg',
+              'sidebar-section-text', 'sidebar-item-hover-bg', 'sidebar-item-hover-text',
+              'sidebar-item-active-bg', 'sidebar-item-active-text'):
+        if t in dark_pal:
+            d[t] = dark_pal[t]
+    return d
+
+
 def derive_dark(light):
     """Designed dark companion: dark surfaces tinted with the theme's hue."""
     acc = parse_color(light.get('accent-color')) or (88, 86, 214)
@@ -138,7 +172,10 @@ for theme in themes:
         ('bg-', 'text-', 'accent-', 'sidebar-', 'table-', 'focus-', 'border-', 'skeleton-'))}
     is_dark_theme = lum(parse_color(eff_root['bg-primary']) or (255, 255, 255)) < 0.5
     if is_dark_theme:
+        # true-mode polarity: the original dark design becomes the DARK block;
+        # light mode gets a designed light companion that keeps the identity
         dark_pal = {k: v for k, v in eff_dark.items() if k in TOKENS_ORDER}
+        light_pal = derive_light(dark_pal)
     else:
         dark_pal = derive_dark({k: v for k, v in eff_root.items() if k in TOKENS_ORDER})
 
@@ -163,4 +200,4 @@ for theme in themes:
     newcss += block('[data-theme="dark"]', dark_pal,
                     'Dark-toggle palette — theme-controlled, WCAG 2.2 audited')
     open(path, 'w', encoding='utf-8', newline='').write(newcss)
-    print('consolidated', theme, '(dark mirror)' if is_dark_theme else '(designed dark)')
+    print('consolidated', theme, '(designed light companion)' if is_dark_theme else '(designed dark companion)')

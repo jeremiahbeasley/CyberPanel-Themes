@@ -19,27 +19,29 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Theme palette (light / default mode) — WCAG 2.2 audited */
 :root {
-    --bg-primary: #1a1c21;
-    --bg-secondary: #0d0e12;
+    --bg-primary: #f5f6f7;
+    --bg-secondary: #ffffff;
     --bg-sidebar: #0d0e12;
-    --bg-hover: #26272f;
-    --bg-muted: #26272f;
-    --bg-code: #0d0e12;
-    --text-primary: #ffffff;
-    --text-secondary: #babac0;
-    --text-heading: #ffffff;
-    --accent-color: #6495ed;
-    --accent-hover: #82aaf0;
-    --text-on-accent: #0d0e12;
-    --focus-ring: #6495ed;
-    --border-color: #393e46;
-    --table-head-bg: #0d0e12;
+    --bg-hover: #e9eaed;
+    --bg-muted: #f2f3f5;
+    --bg-code: #edeef0;
+    --text-primary: #25282d;
+    --text-secondary: #535965;
+    --text-heading: #17191c;
+    --accent-color: #2469e6;
+    --accent-hover: #1757ca;
+    --text-on-accent: #ffffff;
+    --focus-ring: #2469e6;
+    --border-color: #d8dadf;
+    --table-head-bg: #2469e6;
     --table-head-text: #ffffff;
     --sidebar-text: #ffffff;
     --sidebar-text-muted: #babac0;
@@ -47,9 +49,8 @@ h1, h2, h3, h4, h5, h6 {
     --sidebar-section-text: #babac0;
     --sidebar-item-hover-bg: #26272f;
     --sidebar-item-hover-text: #ffffff;
-    --sidebar-item-active-text: #2e2e2e;
-    --sidebar-item-active-text: #2e2e2e;
-    --border-soft: #26272f;
+    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-item-active-text: #f5f5f5;
 }
 
 /* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */

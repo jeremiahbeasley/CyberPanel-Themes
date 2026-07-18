@@ -35,6 +35,10 @@ textarea {
     font-family: "Source Code Pro", monospace;
 }
 
+
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --theme-color-0: #1679ab;
     --theme-color-1: #050c9c;

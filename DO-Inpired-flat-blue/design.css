@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0;
 }
 
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --theme-color-0: #4040c5;
     --theme-color-1: #303092;
