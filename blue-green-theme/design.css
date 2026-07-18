@@ -12,3 +12,11 @@ color: #38ef7d;
 .btn-blue-alt.active, .btn-blue-alt.disabled, .btn-blue-alt.disabled.active, .btn-blue-alt.disabled:active, .btn-blue-alt.disabled:focus, .btn-blue-alt.disabled:hover, .btn-blue-alt:active, .btn-blue-alt:focus, .btn-blue-alt:hover, .btn-blue-alt[disabled], .btn-blue-alt[disabled].active, .btn-blue-alt[disabled]:active, .btn-blue-alt[disabled]:focus, .btn-blue-alt[disabled]:hover, .label-blue-alt[href]:focus, .label-blue-alt[href]:hover, .open .dropdown-toggle.btn-blue-alt {color:#fff;background:#11998e;border-color: #11998e;}
 
 .badge-blue-alt, .bg-blue-alt, .btn-blue-alt, .hover-blue-alt:hover, .label-blue-alt {color:#fff;background:#38ef7d;border-color: #38ef7d;}
+
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --focus-ring: #5856d6;
+}

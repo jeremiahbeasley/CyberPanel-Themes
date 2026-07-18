@@ -173,7 +173,6 @@ textarea {
 .form-group .input-group input.form-control:focus {
     background-color: #3a3a3a !important;
     box-shadow: none !important;
-    outline: none !important;
 }
 
 .input-group-addon.bg-blue {
@@ -317,4 +316,12 @@ h1#loginFormTitle,
     box-shadow: 0 4px 12px var(--active-shadow) !important;
     color: var(--text-inverse) !important;
     transform: translateY(-1px) !important;
+}
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --focus-ring: #cccccc;
+    --text-on-accent: #525252;
 }

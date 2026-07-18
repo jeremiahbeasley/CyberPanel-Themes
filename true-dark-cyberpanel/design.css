@@ -137,3 +137,10 @@ label {
     color: #45be46;
     font-weight: bold;
 }
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --focus-ring: #5856d6;
+}

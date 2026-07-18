@@ -218,9 +218,9 @@ p {
     box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
 }
 
+/* keep keyboard focus visible (WCAG 2.4.7): only the border reset stays */
 .form-control:focus,
 input:focus {
-    outline: 0 !important;
     border: none;
 }
 
@@ -295,4 +295,11 @@ a[title~="Package"] {
 /* Hover Effects */
 .ng-binding:not(.badge):hover {
     color: var(--accent) !important;
+}
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --focus-ring: #5856d6;
 }

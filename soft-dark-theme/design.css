@@ -464,3 +464,21 @@ hr {
 .select2-container--default .select2-results__option--selected {
     background-color: var(--form-control-background);
 }
+
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --accent-color: #817fe0;
+    --focus-ring: #7877de;
+    --text-secondary: #858c99;
+}
+
+
+/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
+   with insufficient contrast, plus a focus ring visible on its own
+   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
+:root {
+    --text-on-accent: #1f1f1f;
+}
