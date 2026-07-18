@@ -1,305 +1,47 @@
-/* Color Variables */
+/*
+    Name: Ragnarock
+    A warm parchment-and-navy theme: cream page, deep navy sidebar,
+    orange / red / gold accents.
+    (Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel.)
+*/
+
 :root {
+    /* original Ragnarock palette */
     --primary: #003049;
     --secondary: #f77f00;
     --accent: #d62828;
     --background: #eae2b7;
     --background-light: #f6efca;
     --highlight: #fdc85e;
-    --text-muted: #8da0aa;
-    --border-light: #d3cb87f2;
-    --white: #ffffff;
-}
 
-/* Header and Base Styles */
-body, #loading {
-    background-color: var(--primary);
-    color: var(--primary) !important;
-}
+    /* cream content on parchment, deep navy sidebar */
+    --bg-primary: #eae2b7;
+    --bg-secondary: #f6efca;
+    --bg-hover: #ddd39e;
+    --text-primary: #003049;
+    --text-secondary: #546770;
+    --text-heading: #003049;
 
-#page-header {
-    background: var(--primary) !important;
-}
+    --bg-sidebar: var(--primary);
+    --sidebar-text: #eae2b7;
+    --sidebar-text-muted: #fdc85e;
+    --sidebar-section-bg: #003049;
+    --sidebar-section-text: #f77f00;
+    --sidebar-item-hover-bg: #00415f;
+    --sidebar-item-hover-text: #fdc85e;
 
-/* Badge Styles */
-.badge {
-    color: var(--primary);
-    background-color: var(--accent);
-}
+    /* navy buttons, orange hover (darkened for white label contrast) */
+    --accent-color: #003049;
+    --accent-hover: #b75e00;
+    --text-on-accent: #ffffff;
 
-.badge-yellow {
-    background-color: var(--highlight) !important;
-    opacity: 0.8;
-    color: var(--primary);
-}
+    --border-color: #d3cb87;
+    --border-soft: #e0d9a4;
+    --shadow-color: rgba(17, 17, 26, 0.1);
+    --bg-muted: #f0eddb;
+    --table-head-bg: #f6efca;
+    --table-head-text: #003049;
 
-/* Sidebar Styles */
-#sidebar-menu {
-    background: var(--primary);
-}
-
-.scroll-sidebar {
-    background: var(--primary);
-}
-
-#page-sidebar ul li.header {
-    color: var(--secondary) !important;
-}
-
-#sidebar-menu>li>a {
-    color: var(--background) !important;
-}
-
-#page-sidebar ul li a .glyph-icon {
-    color: var(--highlight) !important;
-    opacity: 1;
-}
-
-#page-sidebar ul li a[title~="Address"] {
-    background-color: var(--background) !important;
-    min-width: 250px;
-}
-
-#page-sidebar ul li a[title~="Address"] .glyph-icon {
-    color: var(--primary) !important;
-}
-
-#page-sidebar ul li a:not([title~="Server"]):hover {
-    border-color: var(--secondary);
-}
-
-#page-sidebar ul li a[title~="Server"]:hover {
-    border: none;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 35px;
-}
-
-#page-sidebar ul li a.sfActive {
-    border-bottom: 1px solid var(--secondary);
-}
-
-a[title~="CPU"] {
-    opacity: 0.6;
-}
-
-/* Content Area Styles */
-#page-content,
-.panel,
-.panel-body {
-    background: var(--background);
-    box-shadow: none;
-}
-
-.panel {
-    background-color: var(--background) !important;
-    border: none;
-}
-
-/* Button Styles */
-.btn-primary {
-    border: none;
-    background: var(--primary);
-    box-shadow: rgba(255, 255, 255, 0.2) 0 0 0 1px inset,
-        rgba(255, 255, 255, 0.9) 0 0 0 1px;
-}
-
-.btn-primary:focus,
-.btn-primary:hover {
-    background: var(--secondary);
-}
-
-.btn-primary[disabled] {
-    color: var(--white);
-    border: none;
-    background-color: var(--primary);
-}
-
-/* Column and Content Box Styles */
-.col-md-pull-50 {
-    box-shadow: rgba(17, 17, 26, 0.05) 0 1px 0,
-        rgba(17, 17, 26, 0.1) 0 0 8px;
-    min-width: 150px !important;
-    background-color: var(--background-light) !important;
-}
-
-.col-md-pull-50:hover {
-    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
-}
-
-.col-md-12 {
-    box-shadow: none !important;
-    border: none;
-}
-
-/* Loading Animation */
-.spinner>div {
-    background-color: var(--secondary);
-    height: 100%;
-    width: 25px;
-    display: inline-block;
-}
-
-.spinner .bounce1 {
-    animation-delay: -1.1s;
-}
-
-.spinner .bounce2 {
-    animation-delay: -1s;
-}
-
-.spinner .bounce3 {
-    animation-delay: -0.9s;
-}
-
-@keyframes stretchdelay {
-    0%, 40%, 100% {
-        transform: scaleY(0.2);
-    }
-
-    20% {
-        transform: scaleY(1.1);
-    }
-}
-
-/* Text and Content Styles */
-.content-box-header {
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-decoration: underline;
-    text-decoration-color: var(--border-light);
-    text-underline-offset: 40%;
-}
-
-p {
-    color: var(--primary);
-    opacity: 1;
-}
-
-#page-title p {
-    opacity: 1;
-}
-
-.text-muted {
-    color: var(--primary) !important;
-    opacity: 0.6;
-}
-
-.divider {
-    visibility: hidden;
-}
-
-/* Tile and Progress Styles */
-.tile-box {
-    color: #f0eddb;
-}
-
-.c100 {
-    background-color: var(--primary) !important;
-}
-
-.c100.red .bar,
-.c100.red .fill,
-.c100.red.dark .bar,
-.c100.red.dark .fill,
-.c100.green .bar,
-.c100.green .fill,
-.c100.green.dark .bar,
-.c100.green.dark .fill {
-    border-color: var(--accent) !important;
-}
-
-/* Form and Input Styles */
-.form-control {
-    opacity: 0.7;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
-}
-
-/* keep keyboard focus visible (WCAG 2.4.7): only the border reset stays */
-.form-control:focus,
-input:focus {
-    border: none;
-}
-
-/* Alert Styles */
-.alert {
-    background: var(--primary) !important;
-}
-
-.alert>p {
-    color: var(--white) !important;
-}
-
-/* Table Styles */
-table {
-    background-color: var(--background-light) !important;
-    box-shadow: rgba(17, 17, 26, 0.05) 0 1px 0,
-        rgba(17, 17, 26, 0.1) 0 0 8px;
-    color: var(--primary) !important;
-}
-
-th {
-    border-bottom: 1px solid #e9d778 !important;
-}
-
-.table-responsive {
-    border-bottom: 1px solid var(--border-light) !important;
-}
-
-/* Navigation Styles */
-.nav>li.active {
-    background-color: var(--primary);
-    border: none !important;
-}
-
-.nav>li.active>a {
-    background: var(--primary) !important;
-    border: none !important;
-}
-
-.nav>li>a:hover {
-    background: var(--primary) !important;
-    color: var(--white) !important;
-}
-
-.nav-tabs {
-    border-color: #e5d894 !important;
-}
-
-/* Specific Link Styles */
-a[title~="Manager"] {
-    text-decoration: none;
-    color: var(--primary) !important;
-    font-weight: 400;
-}
-
-a[title~="DKIM"],
-a[title~="Package"] {
-    color: var(--text-muted) !important;
-}
-
-/* Dropdown Styles */
-.dropdown-menu {
-    background: var(--background-light) !important;
-}
-
-/* Notification Styles */
-.brighttheme-success {
-    background-color: var(--background-light) !important;
-    color: var(--primary);
-}
-
-/* Hover Effects */
-.ng-binding:not(.badge):hover {
-    color: var(--accent) !important;
-}
-
-/* WCAG 2.2 contrast fixes: tokens this theme previously inherited
-   with insufficient contrast, plus a focus ring visible on its own
-   backgrounds (1.4.3 text 4.5:1, 1.4.11 focus 3:1). */
-:root {
-    --focus-ring: #5856d6;
+    --focus-ring: #c76600;
 }
