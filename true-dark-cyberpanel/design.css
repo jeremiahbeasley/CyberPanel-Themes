@@ -42,3 +42,43 @@ old-UI selectors no longer exist in the panel.
 
     --focus-ring: #45be46;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #45be46;
+    --accent-hover: #33ff86;
+    --bg-code: #252525;
+    --bg-hover: #303030;
+    --bg-muted: #252525;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #252525;
+    --bg-sidebar: #141414;
+    --border-color: #414141;
+    --focus-ring: #45be46;
+    --sidebar-item-hover-bg: #11024b;
+    --sidebar-item-hover-text: #45be46;
+    --sidebar-section-bg: #141414;
+    --sidebar-section-text: #b4b2b2;
+    --sidebar-text: #dddddd;
+    --sidebar-text-muted: #b4b2b2;
+    --table-head-bg: #252525;
+    --table-head-text: #eaecef;
+    --text-heading: #dfe8f1;
+    --text-on-accent: #032d45;
+    --text-primary: #eaecef;
+    --text-secondary: #b4b2b2;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-text: #3d3d3d;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #3d3d3d;
+}

@@ -334,3 +334,94 @@ h1#loginFormTitle,
     --sidebar-item-hover-text: #5856d6;
     --sidebar-section-text: #525252;
 }
+
+
+/* Mode-invariance: pin tokens the dark/light toggle would flip. */
+:root {
+    --bg-code: #313131;
+    --bg-muted: #1c1c1c;
+    --table-head-bg: #a0a0a0;
+    --table-head-text: #525252;
+}
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-hover: #ffffff;
+    --bg-code: #313131;
+    --bg-muted: #1c1c1c;
+    --focus-ring: #cccccc;
+    --sidebar-item-hover-text: #5856d6;
+    --sidebar-section-text: #525252;
+    --table-head-bg: #a0a0a0;
+    --table-head-text: #525252;
+    --text-heading: #ffffff;
+    --text-on-accent: #525252;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-text: #333333;
+    --sidebar-section-text: #333333;
+    --table-head-text: #333333;
+    --text-on-accent: #333333;
+    --text-primary: #727272;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #525252;
+    --table-head-text: #333333;
+    --text-primary: #757575;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --text-primary: #9b9b9b;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-primary: #999999;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --text-primary: #727272;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-primary: #757575;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --text-primary: #9b9b9b;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-primary: #999999;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --text-primary: #727272;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-primary: #757575;
+}

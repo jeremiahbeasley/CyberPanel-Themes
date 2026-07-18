@@ -74,3 +74,31 @@ h1, h2, h3, h4, h5, h6 {
 textarea {
     font-family: "Source Code Pro", monospace;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #050c9c;
+    --accent-hover: #111111;
+    --bg-code: #f2f2f2;
+    --bg-hover: #f2f2f2;
+    --bg-muted: #fafbfc;
+    --bg-primary: #fff7fc;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #ffffff;
+    --border-color: #cecece;
+    --focus-ring: #050c9c;
+    --sidebar-item-hover-bg: #f2f2f2;
+    --sidebar-item-hover-text: #050c9c;
+    --sidebar-section-bg: #ffffff;
+    --sidebar-section-text: #050c9c;
+    --sidebar-text: #292929;
+    --sidebar-text-muted: #595959;
+    --table-head-bg: #f2f2f2;
+    --table-head-text: #1a2130;
+    --text-heading: #1a2130;
+    --text-on-accent: #ffffff;
+    --text-primary: #292929;
+    --text-secondary: #595959;
+}

@@ -271,3 +271,67 @@ h1#loginFormTitle,
 :root {
     --text-on-accent: #ecedf0;
 }
+
+
+/* Mode-invariance: pin tokens the dark/light toggle would flip. */
+:root {
+    --bg-code: #c5c5ff;
+    --bg-muted: #f0f0ff;
+    --table-head-bg: #7d3e6f;
+    --table-head-text: #ecedf0;
+    --text-heading: #3c002f;
+    --text-secondary: #3c002f;
+}
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-hover: #b14949;
+    --bg-code: #c5c5ff;
+    --bg-muted: #f0f0ff;
+    --focus-ring: #b14949;
+    --table-head-bg: #7d3e6f;
+    --table-head-text: #ecedf0;
+    --text-heading: #3c002f;
+    --text-on-accent: #ecedf0;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --accent-color: #c26b6b;
+    --text-heading: #f400bf;
+    --text-primary: #6f4662;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #191919;
+    --sidebar-item-hover-text: #6064f0;
+    --sidebar-section-text: #191919;
+    --text-on-accent: #191b20;
+    --text-primary: #a77497;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-on-accent: #ebedf0;
+    --text-primary: #6f4662;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-on-accent: #181c20;
+    --text-primary: #a77497;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --text-on-accent: #ebedf0;
+    --text-primary: #6f4662;
+}

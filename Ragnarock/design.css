@@ -52,3 +52,55 @@
 :root {
     --bg-code: #e0d596;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #003049;
+    --accent-hover: #b75e00;
+    --bg-code: #e0d596;
+    --bg-hover: #ddd39e;
+    --bg-muted: #f0eddb;
+    --bg-primary: #eae2b7;
+    --bg-secondary: #f6efca;
+    --bg-sidebar: #003049;
+    --border-color: #d3cb87;
+    --focus-ring: #c76600;
+    --sidebar-item-hover-bg: #00415f;
+    --sidebar-item-hover-text: #fdc85e;
+    --sidebar-section-bg: #003049;
+    --sidebar-section-text: #f77f00;
+    --sidebar-text: #eae2b7;
+    --sidebar-text-muted: #fdc85e;
+    --table-head-bg: #f6efca;
+    --table-head-text: #003049;
+    --text-heading: #003049;
+    --text-on-accent: #ffffff;
+    --text-primary: #003049;
+    --text-secondary: #546770;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-bg: #0080c3;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-bg: #0080c3;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-text: #0a0a0a;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #0a0a0a;
+}

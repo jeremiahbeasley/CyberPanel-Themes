@@ -58,3 +58,43 @@ h1, h2, h3, h4, h5, h6 {
     --table-head-bg: #24292f;
     --table-head-text: #ffffff;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #24292f;
+    --accent-hover: #000000;
+    --bg-code: #d8dcea;
+    --bg-hover: #e9ebf3;
+    --bg-muted: #f4f5f9;
+    --bg-primary: #f4f5f9;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #000000;
+    --border-color: #dfe2ea;
+    --focus-ring: #57606a;
+    --sidebar-item-hover-bg: #222222;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-section-bg: #222222;
+    --sidebar-section-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #ffffff;
+    --table-head-bg: #24292f;
+    --table-head-text: #ffffff;
+    --text-heading: #1b1f24;
+    --text-on-accent: #ffffff;
+    --text-primary: #24292f;
+    --text-secondary: #57606a;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-bg: #505b69;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-bg: #505b69;
+}

@@ -56,3 +56,43 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #6495ed;
+    --accent-hover: #82aaf0;
+    --bg-code: #0d0e12;
+    --bg-hover: #26272f;
+    --bg-muted: #26272f;
+    --bg-primary: #1a1c21;
+    --bg-secondary: #0d0e12;
+    --bg-sidebar: #0d0e12;
+    --border-color: #393e46;
+    --focus-ring: #6495ed;
+    --sidebar-item-hover-bg: #26272f;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-section-bg: #1a1c21;
+    --sidebar-section-text: #babac0;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #babac0;
+    --table-head-bg: #0d0e12;
+    --table-head-text: #ffffff;
+    --text-heading: #ffffff;
+    --text-on-accent: #0d0e12;
+    --text-primary: #ffffff;
+    --text-secondary: #babac0;
+}
+
+
+/* WCAG contrast fixes (light mode). */
+:root {
+    --sidebar-item-active-text: #2e2e2e;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #2e2e2e;
+}

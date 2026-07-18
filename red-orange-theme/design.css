@@ -49,3 +49,31 @@
     --bg-code: #eee1d3;
     --bg-muted: #faf6f2;
 }
+
+
+/* Dark-toggle palette: explicit so the moon icon renders a
+   theme-controlled (and audited) look. Tune freely. */
+[data-theme="dark"] {
+    --accent-color: #d6200c;
+    --accent-hover: #c01e0c;
+    --bg-code: #eee1d3;
+    --bg-hover: #f7e9dd;
+    --bg-muted: #faf6f2;
+    --bg-primary: #faf6f2;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #fbf2ea;
+    --border-color: #ecd9c8;
+    --focus-ring: #d6200c;
+    --sidebar-item-hover-bg: #fdeadb;
+    --sidebar-item-hover-text: #b51c0b;
+    --sidebar-section-bg: #d6200c;
+    --sidebar-section-text: #ffffff;
+    --sidebar-text: #5a4f48;
+    --sidebar-text-muted: #6b5a4e;
+    --table-head-bg: #f5af19;
+    --table-head-text: #4a3405;
+    --text-heading: #40251a;
+    --text-on-accent: #ffffff;
+    --text-primary: #2f2a26;
+    --text-secondary: #6b5a4e;
+}
